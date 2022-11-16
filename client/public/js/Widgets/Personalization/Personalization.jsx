@@ -11,22 +11,29 @@ const Personalization = ({ username, infoUpdate }) => {
         <h5>Please enter these fields to get started:</h5>
         <form onSubmit={(e) => infoUpdate(e)}>
           <label>First Name: </label> &nbsp;
-          <input type="text" name="firstName" placeholder="first name" /> <br />
+          <input type="text" name="firstName" placeholder="first name" required value="Hieu" /> <br />
+
           <label>Last Name: </label>  &nbsp;
-          <input type="text" name="lastName" placeholder="last name" /> <br />
+          <input type="text" name="lastName" placeholder="last name" required value="Ngo" /> <br />
+
           <label>Age:</label> <br />
-          <input type="number" name="age" min="0" max="110" placeholder="0" /> <br />
+          <input type="number" name="age" min="0" max="110" default="0" required value="32" /> <br />
+
           <label>Height:</label> <br />
-          <input type="number" min="0" max="10" name="height-foot" placeholder="0" /> ft. &nbsp;
-          <input type="number" min="0" max="12" name="height-inch" placeholder="0" /> inch
+          <input type="number" min="0" max="10" name="height_ft" placeholder="0" required value="5"/> ft. &nbsp;
+          <input type="number" min="0" max="12" name="height_in" placeholder="0" required value="6"/> inch
           <br />
+
           <label>Dietary Goals:</label> <br />
-          <textarea type="text" name="dietary-goals" /> <br />
+          <textarea type="text" name="dietary_goals" value="To have a healthy diet"/> <br />
+
           <label>Dietary Restrictions:</label> <br />
-          <textarea type="textbox" name="dietary-restrictions" /> <br />
+          <textarea type="textbox" name="dietary_restrictions" value="None"/> <br />
+
           <label>Health Complications:</label> <br />
-          <textarea type="textbox" name="health-complications" /> <br />
-          <input type="submit" />
+          <textarea type="textbox" name="health_complications" value="None"/> <br />
+
+          <input type="submit" value="REGISTER" />
         </form>
       </div>
     </div>

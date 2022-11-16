@@ -1,23 +1,22 @@
 const mongoose = require('mongoose');
 
-const userSchema = mongoose.Schema({
-  username: String,
+const userSchema = new mongoose.Schema({
+  username: { type: String, required: true },
   firstName: String,
   lastName: String,
   age: Number,
   height: {
     foot: Number,
-    inch: Number,
+    inch: Number
   },
-  dietaryGoals: String,
-  dietaryRestrictions: String,
-  healthComplication: String
+  dietaryGoals: { type: String },
+  dietaryRestrictions: { type: String, default: null },
+  healthComplications: { type: String, default: 'None' },
 });
 
 const User = mongoose.model('User', userSchema);
 
 const userData = mongoose.Schema({
-
 });
 
 module.exports = {

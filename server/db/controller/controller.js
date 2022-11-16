@@ -1,37 +1,26 @@
-const db = require('../db.js');
 const { User } = require('../models/models.js');
 
-const findUserAndUpdate = async (info) => {
-  // const filter = { username: info.username };
-  // const update = {
-  //   username: info.username,
-  //   firstName: info.firstName,
-  //   lastName: info.lastName,
-  //   age: info.age,
-  //   height: {
-  //     foot: info.foot,
-  //     inch: info.inch,
-  //   },
-  //   dietaryGoals: info.dietaryGoals,
-  //   dietaryRestrictions: info.dietaryRestrictions,
-  //   healthComplication: info.healthComplication
-  // }
-  const filter = { username: 'hue' };
-  const update = {
-    username: 'hue',
-    firstName: 'Hieu',
-    lastName: 'Ngo',
-    age: 32,
-    height: {
-      foot: 5,
-      inch: 6,
-    },
-    dietaryGoals: 'Eat Healthy',
-    dietaryRestrictions: 'nuts',
-    healthComplication: 'none',
-  }
+const findUser = ({ username }) => {
+  return User.find({ username: username });
+};
 
-  console.log('filtered: ', filter);
+const findUserAndUpdate = async ({username, firstName, lastName, age, height, dietaryGoals, dietaryRestrictions, healthComplications}) => {
+  const filter = { username: username };
+  const update = {
+    username: username,
+    firstName: firstName,
+    lastName: lastName,
+    age: age,
+    height: {
+      foot: height.foot,
+      inch: height.inch,
+    },
+    dietaryGoals: dietaryGoals,
+    dietaryRestrictions: dietaryRestrictions,
+    healthComplications: healthComplications,
+  }
+  console.log('search username: ', filter)
+  console.log('fields to update: ', update)
 
   await User.findOneAndUpdate(filter, update, {
     new: true,
@@ -42,5 +31,6 @@ const findUserAndUpdate = async (info) => {
 }
 
 module.exports = {
-  findUserAndUpdate
+  findUser,
+  findUserAndUpdate,
 };

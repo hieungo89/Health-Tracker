@@ -1,6 +1,13 @@
 // Import all of Bootstrap's CSS
 @import "../../node_modules/bootstrap/scss/bootstrap";
+@import '../../node_modules/react-date-range/dist/styles.css'; // main css file
+@import '../../node_modules/react-date-range/dist/theme/default.css'; // theme css file
+
 
 body {
   padding: 15px;
+}
+
+input {
+  border-radius: 5px;
 }

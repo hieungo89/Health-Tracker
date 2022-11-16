@@ -20,18 +20,18 @@ const Personalization = ({ username, infoUpdate }) => {
           <input type="number" name="age" min="0" max="110" default="0" required value="32" /> <br />
 
           <label>Height:</label> <br />
-          <input type="number" min="0" max="10" name="height_ft" placeholder="0" required value="5"/> ft. &nbsp;
-          <input type="number" min="0" max="12" name="height_in" placeholder="0" required value="6"/> inch
+          <input type="number" min="0" max="10" name="height_ft" placeholder="0" required value="5" /> ft. &nbsp;
+          <input type="number" min="0" max="12" name="height_in" placeholder="0" required value="6" /> inch
           <br />
 
           <label>Dietary Goals:</label> <br />
-          <textarea type="text" name="dietary_goals" value="To have a healthy diet"/> <br />
+          <textarea type="text" name="dietary_goals" value="To have a healthy diet" /> <br />
 
           <label>Dietary Restrictions:</label> <br />
-          <textarea type="textbox" name="dietary_restrictions" value="None"/> <br />
+          <textarea type="textbox" name="dietary_restrictions" value="None" /> <br />
 
           <label>Health Complications:</label> <br />
-          <textarea type="textbox" name="health_complications" value="None"/> <br />
+          <textarea type="textbox" name="health_complications" value="None" /> <br />
 
           <input type="submit" value="REGISTER" />
         </form>

@@ -17,7 +17,7 @@ const App = () => {
     } else {
       username = name;
     }
-    axios.get(`http://localhost:3000/user`, { params: { username } })
+    axios.get(`http://localhost:3000/healthTracker`, { params: { username } })
       .then(result => {
         if (result.data) {
           setUsername(result.data.username);
@@ -30,20 +30,21 @@ const App = () => {
   const userInfoUpdate = (data) => {
     data.preventDefault();
     const { firstName, lastName, age, height_ft, height_in, dietary_goals, dietary_restrictions, health_complications } = data.target;
-    axios.post(`http://localhost:3000/user`,
-      {
-        username: username,
-        firstName: firstName.value,
-        lastName: lastName.value,
-        age: age.value,
-        height: {
-          foot: height_ft.value,
-          inch: height_in.value,
-        },
-        dietaryGoals: dietary_goals.value,
-        dietaryRestrictions: dietary_restrictions.value,
-        healthComplications: health_complications.value,
-      })
+    const dataParams = {
+      username: username,
+      firstName: firstName.value,
+      lastName: lastName.value,
+      age: age.value,
+      height: {
+        foot: height_ft.value,
+        inch: height_in.value,
+      },
+      dietaryGoals: dietary_goals.value,
+      dietaryRestrictions: dietary_restrictions.value,
+      healthComplications: health_complications.value,
+    }
+
+    axios.post(`http://localhost:3000/healthTracker`, dataParams)
       .then(() => usernameEntry(username))
       .catch(err => console.log('Error frontend POST: ', err));
   };
@@ -57,13 +58,13 @@ const App = () => {
   return (
     <div>
       {!username && !userInformation &&
-      <FrontPage usernameEntry={usernameEntry} />}
+        <FrontPage usernameEntry={usernameEntry} />}
 
       {username && !userInformation &&
-      <Personalization username={username} infoUpdate={userInfoUpdate} />}
+        <Personalization username={username} infoUpdate={userInfoUpdate} />}
 
       {username && userInformation &&
-      <UserPage userInfo={userInformation}/>}
+        <UserPage userInfo={userInformation} />}
     </div>
   );
 };

@@ -1,25 +1,20 @@
 import React from 'react';
 
-const DailyData = ({ currentUserInfo }) => {
-  if (currentUserInfo.length === 0) { return null; }
-
-  const { sleep, weight, exercise, date } = currentUserInfo;
+const DailyData = ({ eachUserData }) => {
+  const { sleep, weight, exercise, date } = eachUserData;
 
   return (
     <div>
-      <h1>Daily Data:</h1>
-      <br /><br />
-
+      <br />
       <p>
-        On {date}:
+        Date: {date}
         <br /><br />
-        Total hours of sleep: {sleep.sleep_hr} hrs {sleep.sleep_min} mins
-        <br /><br />
-        Total hours of exercise: {exercise.exercise} hrs {exercise.exercise_min} mins
-        <br /><br />
-        Latest Weight taken on is {weight.weightData} taken at {weight.weightTime}
+        Total hours of sleep: {sleep.sleep_hr} hrs {sleep.sleep_min} mins.
+        <br />
+        Total hours of exercise: {exercise.exercise_hr} hrs {exercise.exercise_min} mins.
+        <br />
+        Latest Weight taken on is {weight.weightData}lb, taken at {weight.weightTime}.
       </p>
-
     </div>
   );
 };

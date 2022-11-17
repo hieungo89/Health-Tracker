@@ -8,23 +8,18 @@ const App = () => {
   const [username, setUsername] = useState();
   const [userInformation, setUserInformation] = useState();
 
-  // const usernameEntry = (name) => {
-  //   name.preventDefault();
-  //   setUsername(name.target.username.value);
-  // }
-
   const usernameEntry = async (name) => {
     name.preventDefault();
     const profileName = name.target.username.value;
-
     axios.get(`http://localhost:3000/healthTracker`, { params: { username: profileName } })
       .then(result => {
-        console.log('~~~~ USERNAME RETRIEVAL ~~~~ ', result.data);
+        // console.log('~~~~ USERNAME RETRIEVAL ~~~~ ', result.data);
         if (result.data) {
           setUsername(profileName);
           setUserInformation(result.data);
         } else {
-          setUsername(profileName) }
+          setUsername(profileName)
+        }
       })
       .catch(err => console.log('Error backend GET: ', err));
   };
@@ -51,24 +46,27 @@ const App = () => {
       .catch(err => console.log('Error frontend POST: ', err));
   };
 
-
+  // LOGGING USERNAME AND INFO
   useEffect(() => {
+    console.log('~~~~ USERNAME RETRIEVAL ~~~~');
     console.log('username: ', username)
     console.log('info: ', userInformation);
-    console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+    console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
   }, [username]);
 
 
   return (
-    <div>
+    <div id="main-app">
       {!username && !userInformation &&
         <FrontPage usernameEntry={usernameEntry} />}
 
       {username && !userInformation &&
-        <Personalization username={username} infoUpdate={userInfoUpdate} />}
+        <Personalization username={username} infoUpdate={userInfoUpdate}
+          returnBtn={() => { setUsername(); setUserInformation(); }} />}
 
       {username && userInformation &&
-        <UserPage userInfo={userInformation} />}
+        <UserPage userInfo={userInformation}
+          returnBtn={() => { setUsername(); setUserInformation(); }} />}
     </div>
   );
 };

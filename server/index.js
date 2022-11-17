@@ -33,7 +33,7 @@ app.get('/userData', (req, res) => {
   controller.findUserData(req.query)
     .then(result => {
       console.log('~~~ GET USER DATA ~~~', result)
-      res.status(202).send(result[0]);
+      res.status(202).send(result);
     })
     .catch(err => res.status(404).send('Error Retrieving User: ', err));
 });

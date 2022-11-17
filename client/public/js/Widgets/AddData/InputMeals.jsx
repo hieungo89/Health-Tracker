@@ -7,7 +7,7 @@ const InputMeals = ({ handleReturnBtn, username }) => {
   const [ingredientData, setIngredientData] = useState();
   const [foodData, setFoodData] = useState([]);
 
-  // Search for Nutrition Info from API
+  // SEARCH FOR NUTRITION INFO FROM API
   const searchNutritionInfo = (e) => {
     e.preventDefault();
     const query = `${e.target.amount.value} ${e.target.measurement.value} of ${e.target.foodName.value}`;
@@ -17,12 +17,12 @@ const InputMeals = ({ handleReturnBtn, username }) => {
       .catch(err => console.log('~~ ERROR RETRIEVING NUTRITION DATA ~~', err));
   };
 
-  // Add Ingredients to FoodData
+  // ADD INGREDIENTS TO FOOD DATA
   const handleAddIngredient = () => {
     setFoodData([...foodData, ingredientData]);
   };
 
-  // Remove Ingredient from FoodData
+  // REMOVE INGREDIENTS FROM FOOD DATA
   const handleRemoveIngredient = (food) => {
     let container = [];
     for (let i = 0; i < foodData.length; i++) {
@@ -31,7 +31,7 @@ const InputMeals = ({ handleReturnBtn, username }) => {
     setFoodData(container);
   };
 
-  // Submit Meal Data / Post to Database
+  // SUBMIT MEAL DATA & POST TO DB
   const HandleAddMeal = (e) => {
     e.preventDefault()
     let data = {
@@ -82,6 +82,8 @@ const InputMeals = ({ handleReturnBtn, username }) => {
       .catch(err => console.log('~~ ERROR ADDING MEAL TO DB ~~', err));
   }
 
+
+  // LOGGING CHANGES FOR DEV
   useEffect(() => {
     console.log('ingredients: ', ingredientData);
   }, [ingredientData]);

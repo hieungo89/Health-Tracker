@@ -3,14 +3,20 @@
 @import '../../node_modules/react-date-range/dist/styles.css'; // main css file
 @import '../../node_modules/react-date-range/dist/theme/default.css'; // theme css file
 
+#title {
+  text-align: center;
+}
 
 body {
   padding: 15px;
   background-color: aliceblue;
 }
 
+#main-app {
+  background-color: lightblue;
+}
+
 input,
 button {
   border-radius: 5px;
 }
-

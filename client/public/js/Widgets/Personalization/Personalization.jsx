@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Personalization = ({ username, infoUpdate }) => {
+const Personalization = ({ username, infoUpdate, returnBtn }) => {
 
   return (
     <div>
@@ -35,7 +35,8 @@ const Personalization = ({ username, infoUpdate }) => {
           <textarea type="textbox" rows="4" cols="30" name="health_complications" />
           <br /><br />
 
-          <input type="submit" value="REGISTER" />
+          <input type="submit" value="REGISTER" /> &nbsp;
+          <button onClick={returnBtn}>RETURN TO LOGIN</button>
         </form>
       </div>
     </div>

@@ -4,34 +4,38 @@ const Personalization = ({ username, infoUpdate }) => {
 
   return (
     <div>
-      <h2><em>Personalization</em></h2>
+      {/* <h2><em>Personalization</em></h2> */}
 
       <div>
-        <h3>Welcome {username}!</h3> <br />
+        <h2>Hi {username}!</h2> <br />
         <h5>Please enter these fields to get started:</h5>
+        <p>Fields with * are required</p>
         <form onSubmit={(e) => infoUpdate(e)}>
-          <label>First Name: </label> &nbsp;
-          <input type="text" name="firstName" placeholder="first name" required value="Hieu" /> <br />
+          <label>*First Name: </label> &nbsp;
+          <input type="text" name="firstName" placeholder="first name" required /> <br /><br />
 
-          <label>Last Name: </label>  &nbsp;
-          <input type="text" name="lastName" placeholder="last name" required value="Ngo" /> <br />
+          <label>*Last Name: </label>  &nbsp;
+          <input type="text" name="lastName" placeholder="last name" required /> <br /><br />
 
-          <label>Age:</label> <br />
-          <input type="number" name="age" min="0" max="110" default="0" required value="32" /> <br />
+          <label>*Age:</label> &nbsp;
+          <input type="number" name="age" min="0" max="100" required /> <br /><br />
 
-          <label>Height:</label> <br />
-          <input type="number" min="0" max="10" name="height_ft" placeholder="0" required value="5" /> ft. &nbsp;
-          <input type="number" min="0" max="12" name="height_in" placeholder="0" required value="6" /> inch
-          <br />
+          <label>*Height:</label> &nbsp;
+          <input type="number" min="0" max="10" name="height_ft" placeholder="0" required /> ft. &nbsp;
+          <input type="number" min="0" max="11" name="height_in" placeholder="0" required /> inch
+          <br /><br />
 
-          <label>Dietary Goals:</label> <br />
-          <textarea type="text" name="dietary_goals" value="To have a healthy diet" /> <br />
+          <label>*Dietary Goals:</label> <br />
+          <textarea type="text" rows="4" cols="30" name="dietary_goals" required />
+          <br /><br />
 
-          <label>Dietary Restrictions:</label> <br />
-          <textarea type="textbox" name="dietary_restrictions" value="None" /> <br />
+          <label>Dietary Restrictions (<em>optional</em>):</label> <br />
+          <textarea type="textbox" rows="4" cols="30" name="dietary_restrictions" />
+          <br /><br />
 
-          <label>Health Complications:</label> <br />
-          <textarea type="textbox" name="health_complications" value="None" /> <br />
+          <label>Health Complications (<em>optional</em>):</label> <br />
+          <textarea type="textbox" rows="4" cols="30" name="health_complications" />
+          <br /><br />
 
           <input type="submit" value="REGISTER" />
         </form>

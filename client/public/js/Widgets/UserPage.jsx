@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import DataCapture from './AddData/DataCapture.jsx';
 import DailyData from './DailyData/DailyData.jsx';
+import Meals from './AddData/Meals.jsx';
 import axios from 'axios';
 
 const UserPage = ({ userInfo }) => {
-  const [infoPage, setInfoPage] = useState(true);
+  const [infoPage, setInfoPage] = useState(false);
   const [addData, setAddData] = useState(false);
+  const [addMeals, setAddMeals] = useState(true);
   const [currentUserInfo, setCurrentUserInfo] = useState([]);
-  const date = new Date();
 
+  const date = new Date();
   const { username, firstName, lastName, age, height, dietaryGoals, dietaryRestrictions, healthComplications } = userInfo;
-  // console.log('user info in user page: ', userInfo)
 
   const handleDataInput = (data) => {
     data.preventDefault();
@@ -32,11 +33,20 @@ const UserPage = ({ userInfo }) => {
         exercise_min: data.target.exercise_min.value,
       },
     }
-    console.log('dataParams -------------')
-    console.log(dataParams)
 
     axios.post('http://localhost:3000/userData', dataParams)
-      .catch(err => console.log('input process issue ----------', err));
+      .then(() => {
+        data.target.reset();
+        setInfoPage(true);
+        setAddData(false);
+      })
+      .catch(err => console.log('input process issue: ', err));
+  };
+
+
+  const handleMealInput = () => {
+    setInfoPage(true);
+    setAddMeals(false);
   };
 
 
@@ -59,15 +69,17 @@ const UserPage = ({ userInfo }) => {
           </h4>
 
           <br /> <br />
-          <button onClick={() => { setAddData(true); setInfoPage(false) }}>Add data</button>
+          <button onClick={() => { setAddData(true); setInfoPage(false) }}>Add data</button> &nbsp;
+          <button onClick={() => { setAddMeals(true); setInfoPage(false) }}>Add Meals</button>
           <br /> <br />
 
-          <DailyData />
+          <DailyData currentUserInfo={currentUserInfo} />
         </div>
       }
 
 
       {!infoPage && addData && <DataCapture handleDataInput={handleDataInput} />}
+      {!infoPage && addMeals && <Meals handleMealInput={handleMealInput} />}
     </div>
   );
 };

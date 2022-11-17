@@ -21,11 +21,6 @@ const DataCapture = ({ handleDataInput }) => {
         <label>Weight:</label> &nbsp;
         <input type="number" min="0" max="1000" name="weight" value="120"/> lbs taken at <input type="time" name="weight_time" value="12:09"/>
         <br /><br />
-
-        <label>Meals: </label>
-        <Meals />
-
-        <br /><br />
         <input type="submit" value="ADD DATA" />
       </form>
     </div >

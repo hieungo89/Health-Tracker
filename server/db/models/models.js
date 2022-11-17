@@ -42,6 +42,25 @@ const userDataSchema = mongoose.Schema({
 const UserData = mongoose.model('UserData', userDataSchema);
 
 
+const userMealDataSchema = mongoose.Schema({
+  username: String,
+  date: String,
+  mealType: String,
+  NutrientCount: {
+    calories: { label: String, quantity: Number, unit: String },
+    fat: { label: String, quantity: Number, unit: String },
+    carbohydrate: { label: String, quantity: Number, unit: String },
+    fiber: { label: String, quantity: Number, unit: String },
+    sugar: { label: String, quantity: Number, unit: String },
+    protein: { label: String, quantity: Number, unit: String },
+    cholesterol: { label: String, quantity: Number, unit: String },
+    sodium: { label: String, quantity: Number, unit: String },
+  },
+
+});
+const UserMealData = mongoose.model('UserMealData', userMealDataSchema);
+
+
 const nutritionDataSchema = mongoose.Schema({
   searchString: String,
   food: String,
@@ -63,5 +82,6 @@ const NutritionData = mongoose.model('NutritionData', nutritionDataSchema);
 module.exports = {
   User,
   UserData,
+  UserMealData,
   NutritionData,
 };

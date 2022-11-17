@@ -1,0 +1,1789 @@
+{
+  "text": "shrimp",
+  "parsed": [
+    {
+      "food": {
+        "foodId": "food_asy9pgnaqs4l9tbhggdibax5hw1y",
+        "label": "Scampi Shrimp",
+        "knownAs": "cooked shrimp",
+        "nutrients": {
+          "ENERC_KCAL": 119,
+          "PROCNT": 22.78,
+          "FAT": 1.7,
+          "CHOCDF": 1.52,
+          "FIBTG": 0
+        },
+        "category": "Generic foods",
+        "categoryLabel": "food",
+        "image": "https://www.edamam.com/food-img/dab/dab4af51e4a31595410ce67fd283e2c6.jpg"
+      },
+      "quantity": 1,
+      "measure": {
+        "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+        "label": "Serving",
+        "weight": 32
+      }
+    }
+  ],
+  "hints": [
+    {
+      "food": {
+        "foodId": "food_asy9pgnaqs4l9tbhggdibax5hw1y",
+        "label": "Scampi Shrimp",
+        "knownAs": "cooked shrimp",
+        "nutrients": {
+          "ENERC_KCAL": 119,
+          "PROCNT": 22.78,
+          "FAT": 1.7,
+          "CHOCDF": 1.52,
+          "FIBTG": 0
+        },
+        "category": "Generic foods",
+        "categoryLabel": "food",
+        "image": "https://www.edamam.com/food-img/dab/dab4af51e4a31595410ce67fd283e2c6.jpg"
+      },
+      "measures": [
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_unit",
+          "label": "Whole",
+          "weight": 4.4,
+          "qualified": [
+            {
+              "qualifiers": [
+                {
+                  "uri": "http://www.edamam.com/ontologies/edamam.owl#Qualifier_large",
+                  "label": "large"
+                }
+              ],
+              "weight": 5.5
+            }
+          ]
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+          "label": "Serving",
+          "weight": 32
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+          "label": "Gram",
+          "weight": 1
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+          "label": "Ounce",
+          "weight": 28.349523125
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+          "label": "Pound",
+          "weight": 453.59237
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+          "label": "Kilogram",
+          "weight": 1000
+        }
+      ]
+    },
+    {
+      "food": {
+        "foodId": "food_a739i92bq1vivfaym277jb3lul7x",
+        "label": "Cooked Shrimp",
+        "knownAs": "cooked shrimp",
+        "nutrients": {
+          "ENERC_KCAL": 119,
+          "PROCNT": 22.78,
+          "FAT": 1.7,
+          "CHOCDF": 1.52,
+          "FIBTG": 0
+        },
+        "category": "Generic foods",
+        "categoryLabel": "food",
+        "image": "https://www.edamam.com/food-img/dab/dab4af51e4a31595410ce67fd283e2c6.jpg"
+      },
+      "measures": [
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_unit",
+          "label": "Whole",
+          "weight": 4.4,
+          "qualified": [
+            {
+              "qualifiers": [
+                {
+                  "uri": "http://www.edamam.com/ontologies/edamam.owl#Qualifier_large",
+                  "label": "large"
+                }
+              ],
+              "weight": 5.5
+            }
+          ]
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+          "label": "Serving",
+          "weight": 32
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+          "label": "Gram",
+          "weight": 1
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+          "label": "Ounce",
+          "weight": 28.349523125
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+          "label": "Pound",
+          "weight": 453.59237
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+          "label": "Kilogram",
+          "weight": 1000
+        }
+      ]
+    },
+    {
+      "food": {
+        "foodId": "food_b38bejhbq9loe2bbb7bnmbcpteft",
+        "label": "Taisho Shrimp",
+        "knownAs": "shrimp",
+        "nutrients": {
+          "ENERC_KCAL": 71,
+          "PROCNT": 13.61,
+          "FAT": 1.01,
+          "CHOCDF": 0.91,
+          "FIBTG": 0
+        },
+        "category": "Generic foods",
+        "categoryLabel": "food",
+        "image": "https://www.edamam.com/food-img/ebe/ebe2888b894f48d19762e1d606db0206.jpg"
+      },
+      "measures": [
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_unit",
+          "label": "Whole",
+          "weight": 6,
+          "qualified": [
+            {
+              "qualifiers": [
+                {
+                  "uri": "http://www.edamam.com/ontologies/edamam.owl#Qualifier_small",
+                  "label": "small"
+                }
+              ],
+              "weight": 5
+            },
+            {
+              "qualifiers": [
+                {
+                  "uri": "http://www.edamam.com/ontologies/edamam.owl#Qualifier_medium",
+                  "label": "medium"
+                }
+              ],
+              "weight": 6
+            },
+            {
+              "qualifiers": [
+                {
+                  "uri": "http://www.edamam.com/ontologies/edamam.owl#Qualifier_large",
+                  "label": "large"
+                }
+              ],
+              "weight": 7
+            }
+          ]
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+          "label": "Serving",
+          "weight": 100
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_jumbo",
+          "label": "Jumbo",
+          "weight": 8
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_shrimp",
+          "label": "Shrimp",
+          "weight": 6
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_bag",
+          "label": "Bag",
+          "weight": 128
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_package",
+          "label": "Package",
+          "weight": 128
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+          "label": "Gram",
+          "weight": 1
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+          "label": "Ounce",
+          "weight": 28.349523125
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+          "label": "Pound",
+          "weight": 453.59237
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+          "label": "Kilogram",
+          "weight": 1000
+        }
+      ]
+    },
+    {
+      "food": {
+        "foodId": "food_bjap0xzbf5x6s3azkpwtfb14i25u",
+        "label": "Shrimp",
+        "knownAs": "raw shrimp",
+        "nutrients": {
+          "ENERC_KCAL": 85,
+          "PROCNT": 20.1,
+          "FAT": 0.51,
+          "CHOCDF": 0
+        },
+        "category": "Generic foods",
+        "categoryLabel": "food",
+        "image": "https://www.edamam.com/food-img/4df/4df0fd62e878ed84b387b9e3ab48f2dc.jpg"
+      },
+      "measures": [
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+          "label": "Gram",
+          "weight": 1
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+          "label": "Ounce",
+          "weight": 28.349523125
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+          "label": "Pound",
+          "weight": 453.59237
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+          "label": "Kilogram",
+          "weight": 1000
+        }
+      ]
+    },
+    {
+      "food": {
+        "foodId": "food_blqd6nib3zxqfbaa4lu60ap132b4",
+        "label": "Shrimp",
+        "knownAs": "Shrimp",
+        "nutrients": {
+          "ENERC_KCAL": 111.10235111786075,
+          "PROCNT": 7.147532437276557,
+          "FAT": 5.876845518127834,
+          "CHOCDF": 7.1307147359080725,
+          "FIBTG": 0.8255775835099456
+        },
+        "category": "Generic meals",
+        "categoryLabel": "meal",
+        "foodContentsLabel": "Shrimp; butter; garlic powder; Salt; Pepper; Paprika; White wine; Lemon Juice"
+      },
+      "measures": [
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_unit",
+          "label": "Whole",
+          "weight": 239.43989297863808
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+          "label": "Serving",
+          "weight": 239.43989297863808
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+          "label": "Gram",
+          "weight": 1
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+          "label": "Ounce",
+          "weight": 28.349523125
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+          "label": "Pound",
+          "weight": 453.59237
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+          "label": "Kilogram",
+          "weight": 1000
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_milliliter",
+          "label": "Milliliter",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "food": {
+        "foodId": "food_auhtccobu62neebbr40fhbabuyye",
+        "label": "Shrimp Poppers, Shrimp",
+        "knownAs": "SHRIMP POPPERS, SHRIMP",
+        "nutrients": {
+          "ENERC_KCAL": 310,
+          "PROCNT": 9.520000457763672,
+          "FAT": 14.289999961853027,
+          "CHOCDF": 36.900001525878906,
+          "FIBTG": 3.5999999046325684
+        },
+        "brand": "Poppers",
+        "category": "Packaged foods",
+        "categoryLabel": "food",
+        "foodContentsLabel": "MINCED SHRIMP WATER; BLEACHED WHEAT FLOUR; ENRICHED WHEAT FLOUR (NIACIN; FERROUS SULFATE; THIAMINE MONONITRATE; RIBOFLAVIN; FOLIC ACID); ENRICHED BLEACHED WHEAT FLOUR (FLOUR; NIACIN; FERROUS SULFATE; THIAMINE MONONITRATE; RIBOFLAVIN; FOLIC ACID); METHYLCELLULOSE SALT; DEXTROSE FOOD STARCH-MODIFIED; YELLOW CORN FLOUR; DRIED WHEY (MILK); HYDROLYZED SOY PROTEIN; PARTIALLY HYDROGENATED SOYBEAN AND/OR COTTONSEED OIL; IODIZED SALT; GUAR GUM; SODIUM ALGINATE; SUGAR; YEAST; ARTIFICIAL FLAVOR; GARLIC POWDER; MONOSODIUM GLUTAMATE; DRIED YEAST; ONION POWDER; LEAVENING (SODIUM ACID PYROPHOSPHATE; SODIUM BICARBONATE); DISODIUM GUANYLATE AND DISODIUM INOSINATE; CELLULOSE GUM; CITRIC ACID; CALCIUM CHLORIDE; OLEORESIN PAPRIKA; SPICE EXTRACTIVE.",
+        "image": "https://www.edamam.com/food-img/386/386788ef07d11e0c07fd996cd88fd3fe.jpg",
+        "servingSizes": [
+          {
+            "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+            "label": "Gram",
+            "quantity": 84
+          },
+          {
+            "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+            "label": "Ounce",
+            "quantity": 3
+          }
+        ],
+        "servingsPerContainer": 2
+      },
+      "measures": [
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+          "label": "Serving",
+          "weight": 85.048569375
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_shrimp",
+          "label": "Shrimp",
+          "weight": 5.669904625
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_package",
+          "label": "Package",
+          "weight": 170.09713875
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+          "label": "Gram",
+          "weight": 1
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+          "label": "Ounce",
+          "weight": 28.349523125
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+          "label": "Pound",
+          "weight": 453.59237
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+          "label": "Kilogram",
+          "weight": 1000
+        }
+      ]
+    },
+    {
+      "food": {
+        "foodId": "food_bq0pboxaq7jif9ata8x1baj3rqv0",
+        "label": "Shrimp  Colossal Stuffed Shrimp",
+        "knownAs": "Shrimp  Colossal Stuffed Shrimp",
+        "nutrients": {
+          "ENERC_KCAL": 52.910942924370616,
+          "PROCNT": 13.227735731092654,
+          "FAT": 0,
+          "CHOCDF": 0,
+          "FIBTG": 0
+        },
+        "brand": "COLOSSAL",
+        "category": "Packaged foods",
+        "categoryLabel": "food",
+        "foodContentsLabel": "Shrimp; Salt & Sodium Tripolyphosphate",
+        "servingSizes": [
+          {
+            "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+            "label": "Ounce",
+            "quantity": 4
+          }
+        ],
+        "servingsPerContainer": 6.000000000000001
+      },
+      "measures": [
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+          "label": "Serving",
+          "weight": 113.3980925
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_package",
+          "label": "Package",
+          "weight": 680.3885550000001
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+          "label": "Gram",
+          "weight": 1
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+          "label": "Ounce",
+          "weight": 28.349523125
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+          "label": "Pound",
+          "weight": 453.59237
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+          "label": "Kilogram",
+          "weight": 1000
+        }
+      ]
+    },
+    {
+      "food": {
+        "foodId": "food_axxdnmga8eslrdajrndj8bt5j6k7",
+        "label": "Shrimp",
+        "knownAs": "SHRIMP",
+        "nutrients": {
+          "ENERC_KCAL": 53,
+          "PROCNT": 11.760000228881836,
+          "FAT": 0.5899999737739563,
+          "CHOCDF": 0,
+          "FIBTG": 0
+        },
+        "brand": "Wal-Mart Stores",
+        "category": "Packaged foods",
+        "categoryLabel": "food",
+        "foodContentsLabel": "FARM RAISED SHRIMP (LITOPENAEUS VANNAMEI); SODIUM TRIPOLYPHOSPHATE; SALT.",
+        "servingSizes": [
+          {
+            "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+            "label": "Ounce",
+            "quantity": 3
+          },
+          {
+            "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+            "label": "Gram",
+            "quantity": 85
+          }
+        ],
+        "servingsPerContainer": 4
+      },
+      "measures": [
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+          "label": "Serving",
+          "weight": 85.048569375
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_package",
+          "label": "Package",
+          "weight": 340.1942775
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+          "label": "Gram",
+          "weight": 1
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+          "label": "Ounce",
+          "weight": 28.349523125
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+          "label": "Pound",
+          "weight": 453.59237
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+          "label": "Kilogram",
+          "weight": 1000
+        }
+      ]
+    },
+    {
+      "food": {
+        "foodId": "food_b3ot0x1a4t7eiwa21mp03aeyuhf1",
+        "label": "Shrimp",
+        "knownAs": "Shrimp",
+        "nutrients": {
+          "ENERC_KCAL": 105.82188584874123,
+          "PROCNT": 20.28252812100874,
+          "FAT": 1.7636980974790206,
+          "CHOCDF": 0.8818490487395103,
+          "FIBTG": 0
+        },
+        "brand": "Family Owned Markets",
+        "category": "Packaged foods",
+        "categoryLabel": "food",
+        "foodContentsLabel": "Shrimp; Sodium Bisulfite; Sodium Tripolyphosphate; To Retain Moisture",
+        "servingSizes": [
+          {
+            "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+            "label": "Ounce",
+            "quantity": 4
+          },
+          {
+            "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+            "label": "Gram",
+            "quantity": 112
+          }
+        ]
+      },
+      "measures": [
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+          "label": "Serving",
+          "weight": 113.3980925
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+          "label": "Gram",
+          "weight": 1
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+          "label": "Ounce",
+          "weight": 28.349523125
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+          "label": "Pound",
+          "weight": 453.59237
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+          "label": "Kilogram",
+          "weight": 1000
+        }
+      ]
+    },
+    {
+      "food": {
+        "foodId": "food_a5pn41ia10ueeqbzwdcnsb62v4l2",
+        "label": "Shrimp",
+        "knownAs": "SHRIMP",
+        "nutrients": {
+          "ENERC_KCAL": 70.54792389916082,
+          "PROCNT": 16.461182243137525,
+          "FAT": 1.1757987316526803,
+          "CHOCDF": 0,
+          "FIBTG": 0
+        },
+        "brand": "Lipari Foods Operating Company, LLC",
+        "category": "Packaged foods",
+        "categoryLabel": "food",
+        "foodContentsLabel": "Shrimp; Salt And Sodium Tripolyphosphate; To Retain Moisture For Flavor",
+        "servingSizes": [
+          {
+            "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+            "label": "Gram",
+            "quantity": 85
+          },
+          {
+            "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+            "label": "Ounce",
+            "quantity": 3
+          }
+        ]
+      },
+      "measures": [
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+          "label": "Serving",
+          "weight": 85.048569375
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+          "label": "Gram",
+          "weight": 1
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+          "label": "Ounce",
+          "weight": 28.349523125
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+          "label": "Pound",
+          "weight": 453.59237
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+          "label": "Kilogram",
+          "weight": 1000
+        }
+      ]
+    },
+    {
+      "food": {
+        "foodId": "food_aarh14obp04xg7bxfhi4bb5er7cx",
+        "label": "Shrimp  Count Shrimp  Hot",
+        "knownAs": "Shrimp  Count Shrimp  Hot",
+        "nutrients": {
+          "ENERC_KCAL": 88.18490487395103,
+          "PROCNT": 20.28252812100874,
+          "FAT": 0.8818490487395103,
+          "CHOCDF": 0,
+          "FIBTG": 0
+        },
+        "brand": "Arctic Shores",
+        "category": "Packaged foods",
+        "categoryLabel": "food",
+        "foodContentsLabel": "Shrimp; Water; Salt; Sodium Tripolyphosphate",
+        "image": "https://www.edamam.com/food-img/28a/28a2edef9bd7f5b9297a4839dd074e7b.jpg",
+        "servingSizes": [
+          {
+            "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+            "label": "Ounce",
+            "quantity": 4
+          }
+        ],
+        "servingsPerContainer": 7
+      },
+      "measures": [
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+          "label": "Serving",
+          "weight": 113.3980925
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_package",
+          "label": "Package",
+          "weight": 793.7866475000001
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+          "label": "Gram",
+          "weight": 1
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+          "label": "Ounce",
+          "weight": 28.349523125
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+          "label": "Pound",
+          "weight": 453.59237
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+          "label": "Kilogram",
+          "weight": 1000
+        }
+      ]
+    },
+    {
+      "food": {
+        "foodId": "food_b17tdribudjrhnbgf5kq4a3ou1vs",
+        "label": "Shrimp Classic Scampi, Shrimp",
+        "knownAs": "SHRIMP CLASSIC SCAMPI, SHRIMP",
+        "nutrients": {
+          "ENERC_KCAL": 159,
+          "PROCNT": 20.350000381469727,
+          "FAT": 6.190000057220459,
+          "CHOCDF": 4.420000076293945,
+          "FIBTG": 0.8999999761581421
+        },
+        "brand": "CLASSIC",
+        "category": "Packaged foods",
+        "categoryLabel": "food",
+        "foodContentsLabel": "SHRIMP; SAUCE. SHRIMP - SHRIMP; WATER; SODIUM DI-; TRI-; AND POLYPHOSPHATE (TO RETAIN MOISTURE); SODIUM BISULFITE (PRESERVATIVE). SAUCE - WATER; MARGARINE [PALM OIL; WATER; SOYBEAN OIL; SALT; NATURAL FLAVOR; SOY LECITHIN; BETA CAROTENE (COLOR); VITAMIN A PALMITATE (PRESERVATIVE)]; MODIFIED CORN STARCH; GARLIC POWDER; GELATIN; MALTODEXTRIN; PARMESAN AND ROMANO CHEESE (MILK; CHEESE CULTURE; SALT; ENZYMES); BUTTER (CREAM; SALT); SALT; NATURAL FLAVOR; WHEY; SPICES; PARSLEY; NONFAT MILK; DEHYDRATED ROASTED GARLIC; DEHYDRATED ONION; COLORED WITH TURMERIC AND ANNATTO EXTRACTS.",
+        "image": "https://www.edamam.com/food-img/58f/58f2e1abd043c1e6d57abc6824bbcdea.jpg",
+        "servingSizes": [
+          {
+            "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+            "label": "Gram",
+            "quantity": 113
+          },
+          {
+            "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_shrimp",
+            "label": "Shrimp",
+            "quantity": 9
+          }
+        ]
+      },
+      "measures": [
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+          "label": "Serving",
+          "weight": 113
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_shrimp",
+          "label": "Shrimp",
+          "weight": 12.555555555555555
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+          "label": "Gram",
+          "weight": 1
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+          "label": "Ounce",
+          "weight": 28.349523125
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+          "label": "Pound",
+          "weight": 453.59237
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+          "label": "Kilogram",
+          "weight": 1000
+        }
+      ]
+    },
+    {
+      "food": {
+        "foodId": "food_a330fvwabcgu7xar4exwea32axe9",
+        "label": "Manchurian Shrimp (Garlic Flavored Shrimp)",
+        "knownAs": "Manchurian Shrimp (garlic Flavored Shrimp)",
+        "nutrients": {
+          "ENERC_KCAL": 165.64797941195522,
+          "PROCNT": 11.697715141713294,
+          "FAT": 11.71921179149315,
+          "CHOCDF": 4.85171876939325,
+          "FIBTG": 2.4551771743270954
+        },
+        "category": "Generic meals",
+        "categoryLabel": "meal",
+        "foodContentsLabel": "shrimp; cornstarch; ginger; garlic; white pepper; salt; coriander; egg; oil; vegetable oil; scallions; green chili; tomato paste; sugar; white vinegar; soy sauce; black pepper"
+      },
+      "measures": [
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_unit",
+          "label": "Whole",
+          "weight": 150.61242761462208
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+          "label": "Serving",
+          "weight": 150.61242761462208
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+          "label": "Gram",
+          "weight": 1
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+          "label": "Ounce",
+          "weight": 28.349523125
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+          "label": "Pound",
+          "weight": 453.59237
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+          "label": "Kilogram",
+          "weight": 1000
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_milliliter",
+          "label": "Milliliter",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "food": {
+        "foodId": "food_bchgq66bpb2cwtami98l8b0savn1",
+        "label": "Seapak Shrimp co. Shrimp Taquitos Shrimp, 0.0",
+        "knownAs": "Seapak Shrimp Co. Shrimp Taquitos Shrimp, 0.0",
+        "nutrients": {
+          "ENERC_KCAL": 294.11764705882354,
+          "PROCNT": 10.294117647058824,
+          "FAT": 13.23529411764706,
+          "CHOCDF": 33.82352941176471,
+          "FIBTG": 2.9411764705882355
+        },
+        "brand": "Seapak",
+        "category": "Packaged foods",
+        "categoryLabel": "food",
+        "foodContentsLabel": "Tortilla; Wheat Flour; Water; Rice Bran Oil; Baking Powder; Sodium Bicarbonate; Sodium Acid Pyrophosphate; Calcium Carbonate; Tapioca Starch; Sugar; Dough Conditioners; Carboxymethylcellulose; Monoglycerides; Salt; Cheddar Cheese; Pasteurized Milk; Cheese Cultures; Salt; Microbial Enzymes; Annatto; Color; Shrimp; Onions; Black Beans; Corn; Kernel Corn; Water; Salt; Sugar; Citric Acid; Seasoning Mix; Tapioca Starch; Maltodextrin; Garlic Powder; Onion Powder; Salt; Paprika; Spices; Wheat Flour; Lime Juice Powder; Soybean Oil; Extractives Of Paprika; Red Bell Peppers; Green Bell Peppers; sauce; Spices; Chili; Onion; Shallot; Garlic; Coriander; Water; Tomato; Maltodextrin; Distilled Vinegar; Sugar; Salt; Modified Tapioca Starch; Xanthan Gum; Malic Acid; Citric Acid",
+        "servingSizes": [
+          {
+            "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+            "label": "Gram",
+            "quantity": 68
+          },
+          {
+            "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_piece",
+            "label": "Piece",
+            "quantity": 2
+          }
+        ],
+        "servingsPerContainer": 4
+      },
+      "measures": [
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+          "label": "Serving",
+          "weight": 68
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_piece",
+          "label": "Piece",
+          "weight": 34
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_package",
+          "label": "Package",
+          "weight": 272
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+          "label": "Gram",
+          "weight": 1
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+          "label": "Ounce",
+          "weight": 28.349523125
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+          "label": "Pound",
+          "weight": 453.59237
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+          "label": "Kilogram",
+          "weight": 1000
+        }
+      ]
+    },
+    {
+      "food": {
+        "foodId": "food_bohto5vbc8akjba2mjnqla0fch38",
+        "label": "Dried Shrimp",
+        "knownAs": "dried shrimp",
+        "nutrients": {
+          "ENERC_KCAL": 253,
+          "PROCNT": 51.7,
+          "FAT": 3.44,
+          "CHOCDF": 0,
+          "FIBTG": 8.6
+        },
+        "category": "Generic foods",
+        "categoryLabel": "food",
+        "image": "https://www.edamam.com/food-img/d0d/d0dd65026ac2f6aa9107043e512cda6a.jpg"
+      },
+      "measures": [
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+          "label": "Gram",
+          "weight": 1
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+          "label": "Ounce",
+          "weight": 28.349523125
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+          "label": "Pound",
+          "weight": 453.59237
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+          "label": "Kilogram",
+          "weight": 1000
+        }
+      ]
+    },
+    {
+      "food": {
+        "foodId": "food_bs4g96daz36c11bwb1x7lbzgrvqx",
+        "label": "Shrimp Paste",
+        "knownAs": "canned shrimp",
+        "nutrients": {
+          "ENERC_KCAL": 100,
+          "PROCNT": 20.42,
+          "FAT": 1.36,
+          "CHOCDF": 0,
+          "FIBTG": 0
+        },
+        "category": "Generic foods",
+        "categoryLabel": "food",
+        "image": "https://www.edamam.com/food-img/33a/33ad937ee2169adc0a69cb97a48da579.jpg"
+      },
+      "measures": [
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_unit",
+          "label": "Whole",
+          "weight": 3.2
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+          "label": "Serving",
+          "weight": 64
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_shrimp",
+          "label": "Shrimp",
+          "weight": 3.2
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_can",
+          "label": "Can",
+          "weight": 128,
+          "qualified": [
+            {
+              "qualifiers": [
+                {
+                  "uri": "http://www.edamam.com/ontologies/edamam.owl#LanguaL_Z0219",
+                  "label": "DRAINED"
+                }
+              ],
+              "weight": 128
+            }
+          ]
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+          "label": "Gram",
+          "weight": 1
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+          "label": "Ounce",
+          "weight": 28.349523125
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+          "label": "Pound",
+          "weight": 453.59237
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+          "label": "Kilogram",
+          "weight": 1000
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_cup",
+          "label": "Cup",
+          "weight": 128
+        }
+      ]
+    },
+    {
+      "food": {
+        "foodId": "food_atron1eana66j5b3qv63kbtd7jur",
+        "label": "Fried Shrimp",
+        "knownAs": "fried shrimp",
+        "nutrients": {
+          "ENERC_KCAL": 308,
+          "PROCNT": 7.84,
+          "FAT": 18.9,
+          "CHOCDF": 27.99,
+          "FIBTG": 0.7
+        },
+        "category": "Generic foods",
+        "categoryLabel": "food",
+        "image": "https://www.edamam.com/food-img/c8a/c8a8c6074c7a9c0815ce324b63808554.JPG"
+      },
+      "measures": [
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_unit",
+          "label": "Whole",
+          "weight": 13
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_piece",
+          "label": "Piece",
+          "weight": 13
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+          "label": "Serving",
+          "weight": 13
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+          "label": "Gram",
+          "weight": 1
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+          "label": "Ounce",
+          "weight": 28.349523125
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+          "label": "Pound",
+          "weight": 453.59237
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+          "label": "Kilogram",
+          "weight": 1000
+        }
+      ]
+    },
+    {
+      "food": {
+        "foodId": "food_a2pn322b53j3h9ariflaxapv3vfj",
+        "label": "Shrimp Etoufee",
+        "knownAs": "Shrimp Etoufee",
+        "nutrients": {
+          "ENERC_KCAL": 88.10942735940729,
+          "PROCNT": 5.680410472790219,
+          "FAT": 5.1920126396987785,
+          "CHOCDF": 4.913272067311682,
+          "FIBTG": 0.8537176745062867
+        },
+        "category": "Generic meals",
+        "categoryLabel": "meal",
+        "foodContentsLabel": "butter; flour; onion; celery; bell pepper; garlic; thyme; shrimp stock; shrimp; salt; pepper; lemon juice; green onions; parsley"
+      },
+      "measures": [
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_unit",
+          "label": "Whole",
+          "weight": 341.5348530366661
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+          "label": "Serving",
+          "weight": 341.5348530366661
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+          "label": "Gram",
+          "weight": 1
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+          "label": "Ounce",
+          "weight": 28.349523125
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+          "label": "Pound",
+          "weight": 453.59237
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+          "label": "Kilogram",
+          "weight": 1000
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_milliliter",
+          "label": "Milliliter",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "food": {
+        "foodId": "food_a3wvip5bz2dw3jbpeaqcqawmgtey",
+        "label": "Cajun Shrimp",
+        "knownAs": "Cajun Shrimp",
+        "nutrients": {
+          "ENERC_KCAL": 121.04203377403077,
+          "PROCNT": 10.300500100586953,
+          "FAT": 6.924062428222402,
+          "CHOCDF": 4.313904852989688,
+          "FIBTG": 0.6153220137712156
+        },
+        "category": "Generic meals",
+        "categoryLabel": "meal",
+        "foodContentsLabel": "shrimp; butter; seasoning; green onion; lemon"
+      },
+      "measures": [
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_unit",
+          "label": "Whole",
+          "weight": 200.4199252740811
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+          "label": "Serving",
+          "weight": 200.4199252740811
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+          "label": "Gram",
+          "weight": 1
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+          "label": "Ounce",
+          "weight": 28.349523125
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+          "label": "Pound",
+          "weight": 453.59237
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+          "label": "Kilogram",
+          "weight": 1000
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_milliliter",
+          "label": "Milliliter",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "food": {
+        "foodId": "food_bfgsnr3bn5xgpnbgfm9ezbdivn5b",
+        "label": "Chilli Shrimp",
+        "knownAs": "Chilli Shrimp",
+        "nutrients": {
+          "ENERC_KCAL": 103.74151232479396,
+          "PROCNT": 6.174271460635124,
+          "FAT": 6.049450807400904,
+          "CHOCDF": 6.695223307824573,
+          "FIBTG": 1.3589258183338833
+        },
+        "category": "Generic meals",
+        "categoryLabel": "meal",
+        "foodContentsLabel": "shrimps; garlic; red pepper; olive oil"
+      },
+      "measures": [
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_unit",
+          "label": "Whole",
+          "weight": 178.37977516840593
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+          "label": "Serving",
+          "weight": 178.37977516840593
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_gram",
+          "label": "Gram",
+          "weight": 1
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_ounce",
+          "label": "Ounce",
+          "weight": 28.349523125
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_pound",
+          "label": "Pound",
+          "weight": 453.59237
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram",
+          "label": "Kilogram",
+          "weight": 1000
+        },
+        {
+          "uri": "http://www.edamam.com/ontologies/edamam.owl#Measure_milliliter",
+          "label": "Milliliter",
+          "weight": 1
+        }
+      ]
+    }
+  ],
+  "_links": {
+    "next": {
+      "title": "Next page",
+      "href": "https://api.edamam.com/api/food-database/v2/parser?session=40&app_id=c68c9a1d&app_key=4ce474a24202f7f68e0308435ed057c4&ingr=shrimp&nutrition-type=logging"
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "uri": "http://www.edamam.com/ontologies/edamam.owl#recipe_ad023e67ccb540dfae94464af65e9741",
+  "calories": 260,
+  "totalWeight": 200,
+  "dietLabels": [
+    "LOW_FAT",
+    "LOW_SODIUM"
+  ],
+  "healthLabels": [
+    "FAT_FREE",
+    "LOW_FAT_ABS",
+    "SUGAR_CONSCIOUS",
+    "LOW_POTASSIUM",
+    "KIDNEY_FRIENDLY",
+    "VEGAN",
+    "VEGETARIAN",
+    "PESCATARIAN",
+    "MEDITERRANEAN",
+    "DASH",
+    "DAIRY_FREE",
+    "GLUTEN_FREE",
+    "WHEAT_FREE",
+    "EGG_FREE",
+    "MILK_FREE",
+    "PEANUT_FREE",
+    "TREE_NUT_FREE",
+    "SOY_FREE",
+    "FISH_FREE",
+    "SHELLFISH_FREE",
+    "PORK_FREE",
+    "RED_MEAT_FREE",
+    "CRUSTACEAN_FREE",
+    "CELERY_FREE",
+    "MUSTARD_FREE",
+    "SESAME_FREE",
+    "LUPINE_FREE",
+    "MOLLUSK_FREE",
+    "ALCOHOL_FREE",
+    "NO_OIL_ADDED",
+    "NO_SUGAR_ADDED",
+    "SULPHITE_FREE",
+    "FODMAP_FREE",
+    "KOSHER"
+  ],
+  "cautions": [],
+  "totalNutrients": {
+    "ENERC_KCAL": {
+      "label": "Energy",
+      "quantity": 260,
+      "unit": "kcal"
+    },
+    "FAT": {
+      "label": "Total lipid (fat)",
+      "quantity": 0.56,
+      "unit": "g"
+    },
+    "FASAT": {
+      "label": "Fatty acids, total saturated",
+      "quantity": 0.154,
+      "unit": "g"
+    },
+    "FAMS": {
+      "label": "Fatty acids, total monounsaturated",
+      "quantity": 0.176,
+      "unit": "g"
+    },
+    "FAPU": {
+      "label": "Fatty acids, total polyunsaturated",
+      "quantity": 0.152,
+      "unit": "g"
+    },
+    "CHOCDF": {
+      "label": "Carbohydrate, by difference",
+      "quantity": 56.34,
+      "unit": "g"
+    },
+    "CHOCDF.net": {
+      "label": "Carbohydrates (net)",
+      "quantity": 55.540000000000006,
+      "unit": "g"
+    },
+    "FIBTG": {
+      "label": "Fiber, total dietary",
+      "quantity": 0.8,
+      "unit": "g"
+    },
+    "SUGAR": {
+      "label": "Sugars, total",
+      "quantity": 0.1,
+      "unit": "g"
+    },
+    "PROCNT": {
+      "label": "Protein",
+      "quantity": 5.38,
+      "unit": "g"
+    },
+    "CHOLE": {
+      "label": "Cholesterol",
+      "quantity": 0,
+      "unit": "mg"
+    },
+    "NA": {
+      "label": "Sodium, Na",
+      "quantity": 2,
+      "unit": "mg"
+    },
+    "CA": {
+      "label": "Calcium, Ca",
+      "quantity": 20,
+      "unit": "mg"
+    },
+    "MG": {
+      "label": "Magnesium, Mg",
+      "quantity": 24,
+      "unit": "mg"
+    },
+    "K": {
+      "label": "Potassium, K",
+      "quantity": 70,
+      "unit": "mg"
+    },
+    "FE": {
+      "label": "Iron, Fe",
+      "quantity": 2.4,
+      "unit": "mg"
+    },
+    "ZN": {
+      "label": "Zinc, Zn",
+      "quantity": 0.98,
+      "unit": "mg"
+    },
+    "P": {
+      "label": "Phosphorus, P",
+      "quantity": 86,
+      "unit": "mg"
+    },
+    "VITA_RAE": {
+      "label": "Vitamin A, RAE",
+      "quantity": 0,
+      "unit": "µg"
+    },
+    "VITC": {
+      "label": "Vitamin C, total ascorbic acid",
+      "quantity": 0,
+      "unit": "mg"
+    },
+    "THIA": {
+      "label": "Thiamin",
+      "quantity": 0.326,
+      "unit": "mg"
+    },
+    "RIBF": {
+      "label": "Riboflavin",
+      "quantity": 0.026,
+      "unit": "mg"
+    },
+    "NIA": {
+      "label": "Niacin",
+      "quantity": 2.952,
+      "unit": "mg"
+    },
+    "VITB6A": {
+      "label": "Vitamin B-6",
+      "quantity": 0.186,
+      "unit": "mg"
+    },
+    "FOLDFE": {
+      "label": "Folate, DFE",
+      "quantity": 194,
+      "unit": "µg"
+    },
+    "FOLFD": {
+      "label": "Folate, food",
+      "quantity": 6,
+      "unit": "µg"
+    },
+    "FOLAC": {
+      "label": "Folic acid",
+      "quantity": 110,
+      "unit": "µg"
+    },
+    "VITB12": {
+      "label": "Vitamin B-12",
+      "quantity": 0,
+      "unit": "µg"
+    },
+    "VITD": {
+      "label": "Vitamin D (D2 + D3)",
+      "quantity": 0,
+      "unit": "µg"
+    },
+    "TOCPHA": {
+      "label": "Vitamin E (alpha-tocopherol)",
+      "quantity": 0.08,
+      "unit": "mg"
+    },
+    "VITK1": {
+      "label": "Vitamin K (phylloquinone)",
+      "quantity": 0,
+      "unit": "µg"
+    },
+    "WATER": {
+      "label": "Water",
+      "quantity": 136.88,
+      "unit": "g"
+    }
+  },
+  "totalDaily": {
+    "ENERC_KCAL": {
+      "label": "Energy",
+      "quantity": 13,
+      "unit": "%"
+    },
+    "FAT": {
+      "label": "Fat",
+      "quantity": 0.8615384615384617,
+      "unit": "%"
+    },
+    "FASAT": {
+      "label": "Saturated",
+      "quantity": 0.77,
+      "unit": "%"
+    },
+    "CHOCDF": {
+      "label": "Carbs",
+      "quantity": 18.78,
+      "unit": "%"
+    },
+    "FIBTG": {
+      "label": "Fiber",
+      "quantity": 3.2,
+      "unit": "%"
+    },
+    "PROCNT": {
+      "label": "Protein",
+      "quantity": 10.76,
+      "unit": "%"
+    },
+    "CHOLE": {
+      "label": "Cholesterol",
+      "quantity": 0,
+      "unit": "%"
+    },
+    "NA": {
+      "label": "Sodium",
+      "quantity": 0.08333333333333333,
+      "unit": "%"
+    },
+    "CA": {
+      "label": "Calcium",
+      "quantity": 2,
+      "unit": "%"
+    },
+    "MG": {
+      "label": "Magnesium",
+      "quantity": 5.714285714285714,
+      "unit": "%"
+    },
+    "K": {
+      "label": "Potassium",
+      "quantity": 1.4893617021276595,
+      "unit": "%"
+    },
+    "FE": {
+      "label": "Iron",
+      "quantity": 13.333333333333334,
+      "unit": "%"
+    },
+    "ZN": {
+      "label": "Zinc",
+      "quantity": 8.909090909090908,
+      "unit": "%"
+    },
+    "P": {
+      "label": "Phosphorus",
+      "quantity": 12.285714285714286,
+      "unit": "%"
+    },
+    "VITA_RAE": {
+      "label": "Vitamin A",
+      "quantity": 0,
+      "unit": "%"
+    },
+    "VITC": {
+      "label": "Vitamin C",
+      "quantity": 0,
+      "unit": "%"
+    },
+    "THIA": {
+      "label": "Thiamin (B1)",
+      "quantity": 27.166666666666668,
+      "unit": "%"
+    },
+    "RIBF": {
+      "label": "Riboflavin (B2)",
+      "quantity": 2,
+      "unit": "%"
+    },
+    "NIA": {
+      "label": "Niacin (B3)",
+      "quantity": 18.45,
+      "unit": "%"
+    },
+    "VITB6A": {
+      "label": "Vitamin B6",
+      "quantity": 14.307692307692308,
+      "unit": "%"
+    },
+    "FOLDFE": {
+      "label": "Folate equivalent (total)",
+      "quantity": 48.5,
+      "unit": "%"
+    },
+    "VITB12": {
+      "label": "Vitamin B12",
+      "quantity": 0,
+      "unit": "%"
+    },
+    "VITD": {
+      "label": "Vitamin D",
+      "quantity": 0,
+      "unit": "%"
+    },
+    "TOCPHA": {
+      "label": "Vitamin E",
+      "quantity": 0.5333333333333333,
+      "unit": "%"
+    },
+    "VITK1": {
+      "label": "Vitamin K",
+      "quantity": 0,
+      "unit": "%"
+    }
+  },
+  "ingredients": [
+    {
+      "text": "Rice",
+      "parsed": [
+        {
+          "quantity": 1,
+          "measure": "serving",
+          "foodMatch": "Rice",
+          "food": "cooked rice",
+          "foodId": "food_brqcp7fardef20b44y8riax4k0yz",
+          "weight": 200,
+          "retainedWeight": 200,
+          "nutrients": {
+            "RIBF": {
+              "label": "Riboflavin",
+              "quantity": 0.026000000000000002,
+              "unit": "mg"
+            },
+            "VITD": {
+              "label": "Vitamin D",
+              "quantity": 0,
+              "unit": "IU"
+            },
+            "THIA": {
+              "label": "Thiamin",
+              "quantity": 0.326,
+              "unit": "mg"
+            },
+            "FAPU": {
+              "label": "Fatty acids, total polyunsaturated",
+              "quantity": 0.152,
+              "unit": "g"
+            },
+            "NIA": {
+              "label": "Niacin",
+              "quantity": 2.952,
+              "unit": "mg"
+            },
+            "ENERC_KCAL": {
+              "label": "Energy",
+              "quantity": 260,
+              "unit": "kcal"
+            },
+            "FASAT": {
+              "label": "Fatty acids, total saturated",
+              "quantity": 0.154,
+              "unit": "g"
+            },
+            "VITA_RAE": {
+              "label": "Vitamin A, RAE",
+              "quantity": 0,
+              "unit": "µg"
+            },
+            "VITC": {
+              "label": "Vitamin C, total ascorbic acid",
+              "quantity": 0,
+              "unit": "mg"
+            },
+            "PROCNT": {
+              "label": "Protein",
+              "quantity": 5.38,
+              "unit": "g"
+            },
+            "TOCPHA": {
+              "label": "Vitamin E (alpha-tocopherol)",
+              "quantity": 0.08,
+              "unit": "mg"
+            },
+            "CHOLE": {
+              "label": "Cholesterol",
+              "quantity": 0,
+              "unit": "mg"
+            },
+            "FAMS": {
+              "label": "Fatty acids, total monounsaturated",
+              "quantity": 0.176,
+              "unit": "g"
+            },
+            "CHOCDF": {
+              "label": "Carbohydrate, by difference",
+              "quantity": 56.34,
+              "unit": "g"
+            },
+            "FAT": {
+              "label": "Total lipid (fat)",
+              "quantity": 0.56,
+              "unit": "g"
+            },
+            "VITB6A": {
+              "label": "Vitamin B-6",
+              "quantity": 0.18600000000000003,
+              "unit": "mg"
+            },
+            "VITB12": {
+              "label": "Vitamin B-12",
+              "quantity": 0,
+              "unit": "µg"
+            },
+            "FIBTG": {
+              "label": "Fiber, total dietary",
+              "quantity": 0.8,
+              "unit": "g"
+            },
+            "WATER": {
+              "label": "Water",
+              "quantity": 136.88,
+              "unit": "g"
+            },
+            "K": {
+              "label": "Potassium, K",
+              "quantity": 70,
+              "unit": "mg"
+            },
+            "P": {
+              "label": "Phosphorus, P",
+              "quantity": 86,
+              "unit": "mg"
+            },
+            "NA": {
+              "label": "Sodium, Na",
+              "quantity": 2,
+              "unit": "mg"
+            },
+            "ZN": {
+              "label": "Zinc, Zn",
+              "quantity": 0.98,
+              "unit": "mg"
+            },
+            "SUGAR": {
+              "label": "Sugars, total",
+              "quantity": 0.1,
+              "unit": "g"
+            },
+            "CA": {
+              "label": "Calcium, Ca",
+              "quantity": 20,
+              "unit": "mg"
+            },
+            "MG": {
+              "label": "Magnesium, Mg",
+              "quantity": 24,
+              "unit": "mg"
+            },
+            "FE": {
+              "label": "Iron, Fe",
+              "quantity": 2.4,
+              "unit": "mg"
+            },
+            "VITK1": {
+              "label": "Vitamin K (phylloquinone)",
+              "quantity": 0,
+              "unit": "µg"
+            },
+            "FOLFD": {
+              "label": "Folate, food",
+              "quantity": 6,
+              "unit": "µg"
+            },
+            "FOLAC": {
+              "label": "Folic acid",
+              "quantity": 110,
+              "unit": "µg"
+            },
+            "FOLDFE": {
+              "label": "Folate, DFE",
+              "quantity": 194,
+              "unit": "µg"
+            }
+          },
+          "measureURI": "http://www.edamam.com/ontologies/edamam.owl#Measure_serving",
+          "status": "OK"
+        }
+      ]
+    }
+  ],
+  "totalNutrientsKCal": {
+    "ENERC_KCAL": {
+      "label": "Energy",
+      "quantity": 260,
+      "unit": "kcal"
+    },
+    "PROCNT_KCAL": {
+      "label": "Calories from protein",
+      "quantity": 22,
+      "unit": "kcal"
+    },
+    "FAT_KCAL": {
+      "label": "Calories from fat",
+      "quantity": 5,
+      "unit": "kcal"
+    },
+    "CHOCDF_KCAL": {
+      "label": "Calories from carbohydrates",
+      "quantity": 233,
+      "unit": "kcal"
+    }
+  }
+}

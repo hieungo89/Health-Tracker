@@ -1,20 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import DataCapture from './AddData/DataCapture.jsx';
 import DailyData from './DailyData/DailyData.jsx';
-import Meals from './AddData/Meals.jsx';
+import InputMeals from './AddData/InputMeals.jsx';
 import axios from 'axios';
 
 const UserPage = ({ userInfo }) => {
-  const [infoPage, setInfoPage] = useState(false);
+  const [infoPage, setInfoPage] = useState(true);
   const [addData, setAddData] = useState(false);
-  const [addMeals, setAddMeals] = useState(true);
+  const [addMeals, setAddMeals] = useState(false);
   const [currentUserInfo, setCurrentUserInfo] = useState([]);
+  // const dataRef = useRef({})
 
   const date = new Date();
   const { username, firstName, lastName, age, height, dietaryGoals, dietaryRestrictions, healthComplications } = userInfo;
 
+  // POST weight, sleep, exercise to DB, then set Page back to InfoPage
   const handleDataInput = (data) => {
     data.preventDefault();
+    console.log('handleDatainput: ', data.target)
     const dataParams = {
       username: username,
       firstName: firstName,
@@ -43,21 +46,21 @@ const UserPage = ({ userInfo }) => {
       .catch(err => console.log('input process issue: ', err));
   };
 
-
-  const handleMealInput = () => {
+  // Return to InfoPage
+  const handleReturnBtn = () => {
     setInfoPage(true);
     setAddMeals(false);
+    setAddData(false);
   };
 
-
+  // GET Data from DB
   useEffect(() => {
     axios.get('http://localhost:3000/userData', { params: { username } })
       .then(result => setCurrentUserInfo(result.data))
-
   }, []);
 
-  console.log('userInfo**********');
-  console.log(currentUserInfo);
+  // console.log('userInfo**********');
+  // console.log(currentUserInfo);
 
   return (
     <div>
@@ -78,8 +81,10 @@ const UserPage = ({ userInfo }) => {
       }
 
 
-      {!infoPage && addData && <DataCapture handleDataInput={handleDataInput} />}
-      {!infoPage && addMeals && <Meals handleMealInput={handleMealInput} />}
+      {!infoPage && addData &&
+      <DataCapture handleDataInput={handleDataInput} handleReturnBtn={handleReturnBtn}/>}
+      {!infoPage && addMeals &&
+      <InputMeals handleReturnBtn={handleReturnBtn} username={username} />}
     </div>
   );
 };

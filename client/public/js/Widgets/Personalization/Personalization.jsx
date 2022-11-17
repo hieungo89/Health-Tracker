@@ -4,8 +4,6 @@ const Personalization = ({ username, infoUpdate }) => {
 
   return (
     <div>
-      {/* <h2><em>Personalization</em></h2> */}
-
       <div>
         <h2>Hi {username}!</h2> <br />
         <h5>Please enter these fields to get started:</h5>

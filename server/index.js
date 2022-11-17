@@ -1,4 +1,3 @@
-// const path = require('path');
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
@@ -12,68 +11,87 @@ app.use(express.json());
 app.use(morgan('dev'));
 app.use(cors());
 
+// ~~~~ USER PROFILE ~~~~ //
 app.get('/healthTracker', (req, res) => {
   console.log('request: ', req.query);
   controller.findUser(req.query)
-    .then(result => res.status(202).send(result[0]))
+    .then(result => {
+      console.log('~~~ GET USER PROFILE ~~~', result)
+      res.status(202).send(result[0]);
+    })
     .catch(err => res.status(404).send('Error Retrieving User: ', err));
 });
-
 app.post('/healthTracker', (req, res) => {
   controller.findUserAndUpdate(req.body)
     .then(result => res.status(202).end())
     .catch(err => res.status(404).send('Error Updating User: ', err));
 });
 
+// ~~~~ USER DATA - EXERCISE, SLEEP, WEIGHT ~~~~ //
 app.get('/userData', (req, res) => {
-  console.log('get userdata: ', req.query);
+  // console.log('get userdata: ', req.query);
   controller.findUserData(req.query)
-    .then(result => res.status(202).send(result[0]))
+    .then(result => {
+      console.log('~~~ GET USER DATA ~~~', result)
+      res.status(202).send(result[0]);
+    })
     .catch(err => res.status(404).send('Error Retrieving User: ', err));
 });
-
 app.post('/userData', (req, res) => {
   controller.insertUserData(req.body)
     .then(result => res.status(202).end())
     .catch(err => res.status(404).send('Error adding User Data: ', err));
 });
 
-
-
-
-
-
-app.get('/nutritionData', (req, res) => {
-  // const ingr = '2 slices of cheese';
-
-  console.log('get nutrition data ============', req.body);
-  // axios.get('/healthTracker/nutritionData')
-
-
-  axios.get(`https://api.edamam.com/api/nutrition-data?app_id=${process.env.APP_ID}&app_key=${process.env.APP_KEY}&ingr=${req.body.ingr}`)
+// ~~~~ USER DATA - MEALS ~~~~ //
+app.get('/userMeal', (req, res) => {
+  controller.findMealData(req.query)
     .then(result => {
-      const data = {
-        searchString: req.body.ingr,
-        food: result.data.ingredients[0].parsed[0].food,
-        quantity: result.data.ingredients[0].parsed[0].quantity,
-        measure: result.data.ingredients[0].parsed[0].measure,
-        calories: result.data.totalNutrients.ENERC_KCAL,
-        fat: result.data.totalNutrients.FAT,
-        carbohydrate: result.data.totalNutrients.CHOCDF,
-        fiber: result.data.totalNutrients.FIBTG,
-        sugar: result.data.totalNutrients.SUGAR,
-        protein: result.data.totalNutrients.PROCNT,
-        cholesterol: result.data.totalNutrients.CHOLE,
-        sodium: result.data.totalNutrients.NA,
+      console.log('~~~ GET MEALS ~~~', result);
+      res.status(202).send(result);
+    })
+    .catch(err => res.status(404).send('Error Retrieving User: ', err));
+});
+app.post('/userMeal', (req, res) => {
+  controller.findMealDataAndUpdate(req.body)
+    .then(result => res.status(202).end())
+    .catch(err => res.status(404).send('Error adding Meal: ', err));
+})
+
+// ~~~~ NUTRITION API & OWN DATABASE ~~~~ //
+app.get('/nutritionData', (req, res) => {
+  controller.findIngredient(req.query.ingr)
+    .then(result => {
+      console.log('~~~ GET INGREDIENT RESULT FROM DB ~~~', result);
+      if (result.length > 0) {
+        res.status(202).send(result[0]);
+      } else {
+        axios.get(`https://api.edamam.com/api/nutrition-data?app_id=${process.env.APP_ID}&app_key=${process.env.APP_KEY}&ingr=${req.query.ingr}`)
+          .then(result => {
+            const data = {
+              searchString: req.query.ingr,
+              food: result.data.ingredients[0].parsed[0].food,
+              quantity: result.data.ingredients[0].parsed[0].quantity,
+              measure: result.data.ingredients[0].parsed[0].measure,
+              calories: result.data.totalNutrients.ENERC_KCAL || {},
+              fat: result.data.totalNutrients.FAT || {},
+              carbohydrate: result.data.totalNutrients.CHOCDF || {},
+              fiber: result.data.totalNutrients.FIBTG || {},
+              sugar: result.data.totalNutrients.SUGAR || {},
+              protein: result.data.totalNutrients.PROCNT || {},
+              cholesterol: result.data.totalNutrients.CHOLE || {},
+              sodium: result.data.totalNutrients.NA || {},
+            }
+            return data;
+          })
+          .then(data => {
+            console.log('~~~ GET INGREDIENT RESULT FROM API ~~~', result);
+            controller.findIngredientAndUpdate(data);
+            res.status(200).send(data);
+          })
+          .catch(err => res.status(404).send('Error Searching for Nutrition labels: ', err));
       }
-      return data;
     })
-    .then(data => {
-      console.log('data', data)
-      controller.findIngredientAndUpdate(data)
-      res.status(200).send(data)
-    })
-    .catch(err => res.status(404).send('Error Searching for Nutrition labels: ', err));
 });
 
 const port = process.env.PORT || 3000;

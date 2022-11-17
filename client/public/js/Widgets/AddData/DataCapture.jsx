@@ -1,30 +1,33 @@
 import React from 'react';
-import Meals from './Meals.jsx';
 
-const DataCapture = ({ handleDataInput }) => {
+const DataCapture = ({ handleDataInput, handleReturnBtn }) => (
+  <div>
+    <br />
+    <h4>Please fill out ALL fields in order to record your data.</h4>
+    <li>Put 0's for any data you don't want to record</li>
+    <br />
+    <em>*Warning:  Adding data on the same date will override the previous data.</em>
 
-  return (
-    <div>
-
-      <form onSubmit={(e) => handleDataInput(e)}>
-        <label>Select Date: </label> &nbsp;
-        <input type="date" name="date" value="2022-11-16"/>
-        <br /><br />
-        <label>Exercise:</label> &nbsp;
-        <input type="number" min="0" max="23" name="exercise_hr" value="1"/> Hours &nbsp;
-        <input type="number" min="0" max="59" name="exercise_min" value="20"/> Minutes
-        <br /><br />
-        <label>Sleep:</label> &nbsp;
-        <input type="number" min="0" max="23" name="sleep_hr" value="9"/> Hours &nbsp;
-        <input type="number" min="0" max="59" name="sleep_min" value="0"/> Minutes
-        <br /><br />
-        <label>Weight:</label> &nbsp;
-        <input type="number" min="0" max="1000" name="weight" value="120"/> lbs taken at <input type="time" name="weight_time" value="12:09"/>
-        <br /><br />
-        <input type="submit" value="ADD DATA" />
-      </form>
-    </div >
-  );
-};
+    <form onSubmit={(e) => handleDataInput(e)}>
+      <br />
+      <label>Select Date: </label> &nbsp;
+      <input type="date" name="date" required />
+      <br /><br />
+      <label>Exercise:</label> &nbsp;
+      <input type="number" min="0" max="23" name="exercise_hr" required /> Hours &nbsp;
+      <input type="number" min="0" max="59" name="exercise_min" required /> Minutes
+      <br /><br />
+      <label>Sleep:</label> &nbsp;
+      <input type="number" min="0" max="23" name="sleep_hr" required /> Hours &nbsp;
+      <input type="number" min="0" max="59" name="sleep_min" required /> Minutes
+      <br /><br />
+      <label>Weight:</label> &nbsp;
+      <input type="number" min="0" max="1000" name="weight" required /> lbs, taken at <input type="time" name="weight_time" required />
+      <br /><br />
+      <input type="submit" value="ADD DATA" /> &nbsp;
+      <button onClick={() => handleReturnBtn()} >RETURN</button>
+    </form>
+  </div >
+);
 
 export default DataCapture;

@@ -5,24 +5,26 @@ import Personalization from './Widgets/Personalization/Personalization.jsx';
 import UserPage from './Widgets/UserPage.jsx';
 
 const App = () => {
-  const [username, setUsername] = useState('hue');
+  const [username, setUsername] = useState();
   const [userInformation, setUserInformation] = useState();
-  const userInfo = useRef({});
 
-  const usernameEntry = (name) => {
-    let username;
-    if (name.type === 'submit') {
-      name.preventDefault();
-      username = name.target.username.value;
-    } else {
-      username = name;
-    }
-    axios.get(`http://localhost:3000/healthTracker`, { params: { username } })
+  // const usernameEntry = (name) => {
+  //   name.preventDefault();
+  //   setUsername(name.target.username.value);
+  // }
+
+  const usernameEntry = async (name) => {
+    name.preventDefault();
+    const profileName = name.target.username.value;
+
+    axios.get(`http://localhost:3000/healthTracker`, { params: { username: profileName } })
       .then(result => {
+        console.log('~~~~ USERNAME RETRIEVAL ~~~~ ', result.data);
         if (result.data) {
-          setUsername(result.data.username);
+          setUsername(profileName);
           setUserInformation(result.data);
-        } else { setUsername(username) }
+        } else {
+          setUsername(profileName) }
       })
       .catch(err => console.log('Error backend GET: ', err));
   };
@@ -51,7 +53,9 @@ const App = () => {
 
 
   useEffect(() => {
-    usernameEntry(username);
+    console.log('username: ', username)
+    console.log('info: ', userInformation);
+    console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
   }, [username]);
 
 

@@ -33,11 +33,6 @@ const userDataSchema = mongoose.Schema({
     exercise_hr: Number,
     exercise_min: Number,
   },
-  meals: [{
-    when: String,
-    foodIntake: String,
-    calories: Number,
-  }],
 });
 const UserData = mongoose.model('UserData', userDataSchema);
 
@@ -46,17 +41,17 @@ const userMealDataSchema = mongoose.Schema({
   username: String,
   date: String,
   mealType: String,
-  NutrientCount: {
-    calories: { label: String, quantity: Number, unit: String },
-    fat: { label: String, quantity: Number, unit: String },
-    carbohydrate: { label: String, quantity: Number, unit: String },
-    fiber: { label: String, quantity: Number, unit: String },
-    sugar: { label: String, quantity: Number, unit: String },
-    protein: { label: String, quantity: Number, unit: String },
-    cholesterol: { label: String, quantity: Number, unit: String },
-    sodium: { label: String, quantity: Number, unit: String },
-  },
-
+  foodsEaten: String,
+  nutrientCount: {
+    calories: { quantity: Number, unit: String },
+    fat: { quantity: Number, unit: String },
+    carbohydrate: { quantity: Number, unit: String },
+    fiber: { quantity: Number, unit: String },
+    sugar: { quantity: Number, unit: String },
+    protein: { quantity: Number, unit: String },
+    cholesterol: { quantity: Number, unit: String },
+    sodium: { quantity: Number, unit: String }
+  }
 });
 const UserMealData = mongoose.model('UserMealData', userMealDataSchema);
 

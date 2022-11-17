@@ -1,28 +1,14 @@
-const { User, UserData, NutritionData } = require('../models/models.js');
+const { User, UserData, UserMealData, NutritionData } = require('../models/models.js');
 
+// ~~~~ USER PROFILE ~~~~ //
 const findUser = ({ username }) => {
   return User.find({ username: username });
 };
+const findUserAndUpdate = async (data) => {
+  console.log('~~ INSERT USER PROFILE ~~ ', data);
+  const filter = { username: data.username };
 
-const findUserAndUpdate = async ({ username, firstName, lastName, age, height, dietaryGoals, dietaryRestrictions, healthComplications }) => {
-  const filter = { username: username };
-  const update = {
-    username: username,
-    firstName: firstName,
-    lastName: lastName,
-    age: age,
-    height: {
-      foot: height.foot,
-      inch: height.inch,
-    },
-    dietaryGoals: dietaryGoals,
-    dietaryRestrictions: dietaryRestrictions,
-    healthComplications: healthComplications,
-  }
-  // console.log('search username: ', filter)
-  // console.log('fields to update: ', update)
-
-  await User.findOneAndUpdate(filter, update, {
+  await User.findOneAndUpdate(filter, data, {
     new: true,
     upsert: true
   });
@@ -30,33 +16,13 @@ const findUserAndUpdate = async ({ username, firstName, lastName, age, height, d
 };
 
 
-
-
+// ~~~~ USER DATA - EXERCISE, SLEEP, WEIGHT ~~~~ //
 const findUserData = ({ username }) => {
   return UserData.find({ username: username });
 };
-
-const insertUserData = async ({ username, firstName, lastName, date, weight, sleep, exercise }) => {
-  const filter = { username: username, firstName: firstName, lastName: lastName }
-  const data = {
-    username: username,
-    firstName: firstName,
-    lastName: lastName,
-    date: date,
-    weight: {
-      weightData: weight.weightData,
-      weightTime: weight.weightTime,
-    },
-    sleep: {
-      sleep_hr: sleep.sleep_hr,
-      sleep_min: sleep.sleep_min,
-    },
-    exercise: {
-      exercise_hr: exercise.exercise_hr,
-      exercise_min: exercise.exercise_min,
-    },
-  };
-  console.log('insert data: ', data);
+const insertUserData = async (data) => {
+  console.log('~~ INSERT USER DATA ~~ ', data);
+  const filter = { username: data.username, firstName: data.firstName, lastName: data.lastName, date: data.date }
 
   await UserData.findOneAndUpdate(filter, data, {
     new: true,
@@ -66,63 +32,31 @@ const insertUserData = async ({ username, firstName, lastName, date, weight, sle
 };
 
 
+// ~~~~ USER DATA - MEALS ~~~~ //
+const findMealData = ({ username }) => {
+  return UserMealData.find({ username: username });
+};
+const findMealDataAndUpdate = async (data) => {
+  console.log('~~ INSERT MEALS DATA ~~ ', data)
+  const filter = { username: data.username, mealType: data.mealType, date: data.date }
+
+  await UserMealData.findOneAndUpdate(filter, data, {
+    new: true,
+    upsert: true
+  });
+  return;
+};
 
 
+// ~~~~ NUTRITION API & OWN DATABASE ~~~~ //
+const findIngredient = (ingredient) => {
+  return NutritionData.find({ searchString: ingredient })
+};
+const findIngredientAndUpdate = async (data) => {
+  console.log('~~ ADD INGREDIENT DATA ~~ ', data)
 
-const findIngredientAndUpdate = async ({ searchString, food, quantity, measure, calories, fat, carbohydrate, fiber, sugar, protein, cholesterol, sodium }) => {
-  const filter = { food: food, quantity: quantity, measure: measure };
-  const update = {
-    searchString: searchString,
-    food: food,
-    quantity: quantity,
-    measure: measure,
-    calories: {
-      label: calories.label,
-      quantity: calories.quantity,
-      unit: calories.unit,
-    },
-    fat: {
-      label: fat.label,
-      quantity: fat.quantity,
-      unit: fat.unit,
-    },
-    carbohydrate: {
-      label: carbohydrate.label,
-      quantity: carbohydrate.quantity,
-      unit: carbohydrate.unit,
-    },
-    fiber: {
-      label: fiber.label,
-      quantity: fiber.quantity,
-      unit: fiber.unit,
-    },
-    sugar: {
-      label: sugar.label,
-      quantity: sugar.quantity,
-      unit: sugar.unit,
-    },
-    protein: {
-      label: protein.label,
-      quantity: protein.quantity,
-      unit: protein.unit,
-    },
-    cholesterol: {
-      label: cholesterol.label,
-      quantity: cholesterol.quantity,
-      unit: cholesterol.unit,
-    },
-    sodium: {
-      label: sodium.label,
-      quantity: sodium.quantity,
-      unit: sodium.unit,
-    }
-  };
-
-  console.log('controller --------------------------------------- ');
-  console.log('filter: ', filter);
-  console.log('update: ', update);
-
-  await NutritionData.findOneAndUpdate(filter, update, {
+  const filter = { food: data.food, quantity: data.quantity, measure: data.measure };
+  await NutritionData.findOneAndUpdate(filter, data, {
     new: true,
     upsert: true
   });
@@ -134,5 +68,8 @@ module.exports = {
   findUserAndUpdate,
   findUserData,
   insertUserData,
+  findMealData,
+  findMealDataAndUpdate,
+  findIngredient,
   findIngredientAndUpdate,
 };

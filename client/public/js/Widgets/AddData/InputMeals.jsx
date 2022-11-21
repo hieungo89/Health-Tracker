@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Food from './Food.jsx';
 
-const InputMeals = ({ handleReturnBtn, username }) => {
+const InputMeals = ({ handleReturnBtn, username, nutrientsData }) => {
   const [mealType, setMealType] = useState();
   const [ingredientData, setIngredientData] = useState();
   const [foodData, setFoodData] = useState([]);
@@ -40,14 +40,14 @@ const InputMeals = ({ handleReturnBtn, username }) => {
       mealType: mealType,
       foodsEaten: undefined,
       nutrientCount: {
-        calories: { quantity: 0, unit: undefined },
-        fat: { quantity: 0, unit: undefined },
-        carbohydrate: { quantity: 0, unit: undefined },
-        fiber: { quantity: 0, unit: undefined },
-        sugar: { quantity: 0, unit: undefined },
-        protein: { quantity: 0, unit: undefined },
-        cholesterol: { quantity: 0, unit: undefined },
-        sodium: { quantity: 0, unit: undefined },
+        calories: {},
+        fat: {},
+        carbohydrate: {},
+        fiber: {},
+        sugar: {},
+        protein: {},
+        cholesterol: {},
+        sodium: {},
       }
     };
 
@@ -57,31 +57,18 @@ const InputMeals = ({ handleReturnBtn, username }) => {
       } else {
         data.foodsEaten = data.foodsEaten + ', ' + foodData[i].searchString;
       }
-      data.nutrientCount.calories.quantity += foodData[i].calories.quantity;
-      data.nutrientCount.fat.quantity += foodData[i].fat.quantity;
-      data.nutrientCount.carbohydrate.quantity += foodData[i].carbohydrate.quantity;
-      data.nutrientCount.fiber.quantity += foodData[i].fiber.quantity;
-      data.nutrientCount.sugar.quantity += foodData[i].sugar.quantity;
-      data.nutrientCount.cholesterol.quantity += foodData[i].cholesterol.quantity;
-      data.nutrientCount.sodium.quantity += foodData[i].sodium.quantity;
-      if (data.nutrientCount.calories.unit === undefined) {
-        data.nutrientCount.calories.unit = foodData[i].calories.unit;
-        data.nutrientCount.fat.unit = foodData[i].fat.unit;
-        data.nutrientCount.carbohydrate.unit = foodData[i].carbohydrate.unit;
-        data.nutrientCount.fiber.unit = foodData[i].fiber.unit;
-        data.nutrientCount.sugar.unit = foodData[i].sugar.unit;
-        data.nutrientCount.protein.unit = foodData[i].protein.unit;
-        data.nutrientCount.cholesterol.unit = foodData[i].cholesterol.unit;
-        data.nutrientCount.sodium.unit = foodData[i].sodium.unit;
-      }
+      nutrientsData.map(nutrient => {
+        if (foodData[i][nutrient]) {
+          data.nutrientCount[nutrient].quantity = foodData[i][nutrient].quantity;
+          data.nutrientCount[nutrient].unit = foodData[i][nutrient].unit;
+        }
+      })
     }
-
-    console.log('DATA~~~~ ', data);
+    // console.log('DATA~~~~ ', data);
     axios.post('http://localhost:3000/userMeal', data)
       .then(() => handleReturnBtn())
       .catch(err => console.log('~~ ERROR ADDING MEAL TO DB ~~', err));
   }
-
 
   // LOGGING CHANGES FOR DEV
   useEffect(() => {
@@ -92,10 +79,10 @@ const InputMeals = ({ handleReturnBtn, username }) => {
     console.log('mealType: ', mealType);
   }, [mealType]);
 
-  useEffect(() => {
-    console.log('Food Data: ', foodData);
-  }, [foodData]);
-
+  // useEffect(() => {
+  //   console.log('Food Data: ', foodData);
+  //   console.log('nutrient data: ', nutrientsData);
+  // }, [foodData]);
 
   return (
     <div>
@@ -103,10 +90,10 @@ const InputMeals = ({ handleReturnBtn, username }) => {
       <h4>
         You must complete the following in order to record your meal:
       </h4>
-        <li>Select Date</li>
-        <li>Choose a meal type</li>
-        <li>Search and add foods that you've eaten</li>
-        Click "ADD MEAL" to input your data.
+      <li>Select Date</li>
+      <li>Choose a meal type</li>
+      <li>Search and add foods that you've eaten</li>
+      Click "ADD MEAL" to input your data.
 
       <form onSubmit={(e) => HandleAddMeal(e)}>
         <br />

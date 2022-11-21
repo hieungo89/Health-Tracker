@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import DailyMeals from './DailyMeals.jsx';
 
-const DailyMealsList = ({ currentUserMeal }) => {
+const DailyMealsList = ({ currentUserMeal, nutrientsData }) => {
   const [query, setQuery] = useState('');
 
   const filteredItems = currentUserMeal.filter(item => {
@@ -26,7 +26,7 @@ const DailyMealsList = ({ currentUserMeal }) => {
         />
       </div>
 
-      {filteredItems.map(data => { return <DailyMeals eachUserData={data} key={data._id} /> })}
+      {filteredItems.map(data => { return <DailyMeals eachUserData={data} key={data._id} nutrientsData={nutrientsData}/> })}
     </div>
   );
 };

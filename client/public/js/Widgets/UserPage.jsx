@@ -7,6 +7,7 @@ import axios from 'axios';
 import WeightChart from './Charts/WeightChart.jsx';
 import SleepChart from './Charts/SleepChart.jsx';
 import ExerciseChart from './Charts/ExerciseChart.jsx';
+import NutrientChart from './Charts/NutrientChart.jsx';
 
 const UserPage = ({ userInfo, returnBtn }) => {
   const [infoPage, setInfoPage] = useState(true);
@@ -17,13 +18,12 @@ const UserPage = ({ userInfo, returnBtn }) => {
   const [exerciseChart, setExerciseChart] = useState(false);
   const [currentUserInfo, setCurrentUserInfo] = useState([]);
   const [currentUserMeal, setCurrentUserMeal] = useState([]);
-  const [showUserData, setShowUserData] = useState(true);
+  const [showUserData, setShowUserData] = useState(false);
   const [showUserMeals, setShowUserMeals] = useState(false);
+  const [nutrientKeyword, setNutrientKeyword] = useState('');
 
   const { username, firstName, lastName, age, height, dietaryGoals, dietaryRestrictions, healthComplications } = userInfo;
-
-
-
+  const nutrientsData = ['calories', 'fat', 'carbohydrate', 'protein', 'cholesterol', 'fiber', 'sodium', 'sugar'];
 
   // ADD USER DATA TO DB, RETURN TO INFO PAGE
   const handleDataInput = (data) => {
@@ -64,6 +64,38 @@ const UserPage = ({ userInfo, returnBtn }) => {
     setAddData(false);
   };
 
+  // HANDLE CLICK FOR DATA CHARTS
+  const handleUserDataClick = (e) => {
+    if (!e) {
+      setExerciseChart(false);
+      setWeightChart(false);
+      setSleepChart(false);
+    } else if (e.target.textContent === 'Weight') {
+      setWeightChart(!weightChart);
+      setSleepChart(false);
+      setExerciseChart(false);
+    } else if (e.target.textContent === 'Sleep') {
+      setSleepChart(!sleepChart);
+      setWeightChart(false);
+      setExerciseChart(false);
+    } else if (e.target.textContent === 'Exercise') {
+      setExerciseChart(!exerciseChart);
+      setWeightChart(false);
+      setSleepChart(false);
+    }
+  };
+
+  // CHANGE CHART TO SPECIFIC NUTRIENT
+  const handleNutrientBtnClick = (e) => {
+    if (!e) {
+      setNutrientKeyword('');
+    } else {
+      console.log(e.target.textContent);
+      console.log(e);
+      setNutrientKeyword(e.target.textContent);
+    }
+  }
+
   // RETRIEVE INITIAL DATA FROM USER DB
   useEffect(() => {
     const params = { params: { username } };
@@ -74,20 +106,15 @@ const UserPage = ({ userInfo, returnBtn }) => {
   }, [infoPage]);
 
   // LOGGING CHANGES IN INFO AND MEAL
-  useEffect(() => {
-    console.log("~~~~ USER INFO & MEALS ~~~~");
-    console.log(currentUserInfo);
-    console.log(currentUserMeal);
-    console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-  }, [currentUserInfo, currentUserMeal])
-
-
-
-
-
+  // useEffect(() => {
+  //   console.log("~~~~ USER INFO & MEALS ~~~~");
+  //   console.log(currentUserInfo);
+  //   console.log(currentUserMeal);
+  //   console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+  // }, [currentUserInfo, currentUserMeal])
 
   return (
-    <div>
+    <div className="user-page">
       {infoPage && !addData &&
         <div>
           <h2> Hi {firstName}!</h2>
@@ -95,61 +122,76 @@ const UserPage = ({ userInfo, returnBtn }) => {
           <h4>
             Today's Date: {moment(new Date()).format('dddd, MMMM D, Y')}
           </h4>
+          <p>
+            My Dietary Goals: {dietaryGoals} <br />
+            My Dietary Restrictions: {dietaryRestrictions} <br />
+            Any Health Complications: {healthComplications} <br />
+            Age: {age} &nbsp; Height: {height.foot}ft. {height.inch}in.
+          </p>
 
-          <br /> <br />
-          <button onClick={() => { setAddData(true); setInfoPage(false) }}>Add data</button> &nbsp;
+          <br />
+          <button onClick={() => { setAddData(true); setInfoPage(false) }}>Add Data</button> &nbsp;
           <button onClick={() => { setAddMeals(true); setInfoPage(false) }}>Add Meals</button>
           <br /> <br />
 
           <h4>See your Progress:</h4>
           <button onClick={() => {
             setShowUserData(!showUserData);
+            handleUserDataClick();
             setShowUserMeals(false);
           }}>Daily Exercise/Sleep/Weight</button> &nbsp;
           <button onClick={() => {
             setShowUserMeals(!showUserMeals);
+            handleNutrientBtnClick();
             setShowUserData(false);
           }}>Daily Meals</button>
 
 
+
           {showUserData &&
             <div>
+              <br />
               <h4>See charts</h4>
-              <button onClick={() => {
-                setWeightChart(!weightChart);
-                setSleepChart(false);
-                setExerciseChart(false);
-              }}>Weight</button>
-              <button onClick={() => {
-                setSleepChart(!sleepChart);
-                setWeightChart(false);
-                setExerciseChart(false);
-              }}>Sleep</button>
-              <button onClick={() => {
-                setExerciseChart(!exerciseChart);
-                setWeightChart(false);
-                setSleepChart(false);
-              }}>Exercise</button>
+              <p>
+                <button onClick={() => handleUserDataClick()}>close chart</button>
+              </p>
+              <button onClick={(e) => handleUserDataClick(e)}>Weight</button> &nbsp;
+              <button onClick={(e) => handleUserDataClick(e)}>Sleep</button>&nbsp;
+              <button onClick={(e) => handleUserDataClick(e)}>Exercise</button>
 
               {weightChart && <WeightChart currentUserInfo={currentUserInfo} />}
               {sleepChart && <SleepChart currentUserInfo={currentUserInfo} />}
               {exerciseChart && <ExerciseChart currentUserInfo={currentUserInfo} />}
-
               <DailyDataList currentUserInfo={currentUserInfo} />
             </div>
           }
-          {showUserMeals &&
-            <DailyMealsList currentUserMeal={currentUserMeal} />
-          }
 
+          {showUserMeals &&
+            <div> <br />
+              <h4>
+                See charts
+              </h4>
+              <p>
+                <button onClick={() => setNutrientKeyword('')}>close chart</button>
+              </p>
+
+              {nutrientsData.map(data => { return <button onClick={(e) => handleNutrientBtnClick(e)} key={data}>{data}</button> })}
+
+              {nutrientKeyword &&
+                <NutrientChart currentUserMeal={currentUserMeal} keyword={nutrientKeyword} />
+              }
+              <DailyMealsList currentUserMeal={currentUserMeal} nutrientsData={nutrientsData} />
+            </div>
+          }
         </div>
       }
 
-
       {addData &&
-        <DataCapture handleDataInput={handleDataInput} handleReturnBtn={handleReturnBtn} />}
+        <DataCapture handleDataInput={handleDataInput} handleReturnBtn={handleReturnBtn} />
+      }
       {addMeals &&
-        <InputMeals handleReturnBtn={handleReturnBtn} username={username} />}
+        <InputMeals handleReturnBtn={handleReturnBtn} username={username} nutrientsData={nutrientsData} />
+      }
     </div>
   );
 };

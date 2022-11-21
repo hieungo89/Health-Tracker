@@ -17,9 +17,7 @@ const findUserData = ({ username }) => {
 const insertUserData = async (data) => {
   // console.log('~~ INSERT USER DATA ~~ ', data);
   const filter = { username: data.username, firstName: data.firstName, lastName: data.lastName, date: data.date }
-
   return await UserData.findOneAndUpdate(filter, data, { upsert: true });
-
 };
 
 // ~~~~ USER DATA - MEALS ~~~~ //
@@ -36,7 +34,6 @@ const findMealDataAndUpdate = async (data) => {
   if (data.mealType === 'Other') { data.mealId = 7 };
   data.foodsEaten = data.foodsEaten.toLowerCase();
   const filter = { username: data.username, mealType: data.mealType, date: data.date };
-
   return await UserMealData.findOneAndUpdate(filter, data, { upsert: true });
 };
 

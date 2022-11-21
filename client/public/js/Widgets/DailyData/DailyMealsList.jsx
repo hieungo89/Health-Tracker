@@ -15,18 +15,16 @@ const DailyMealsList = ({ currentUserMeal, nutrientsData }) => {
 
   return (
     <div className="data-container">
-      <br />
       <div className="data-title">
         <h4>DAILY MEALS LIST</h4>
-        Search:
+        Search: &nbsp;
         <input
           type="search"
           value={query}
           onChange={e => setQuery(e.target.value)}
         />
       </div>
-
-      {filteredItems.map(data => { return <DailyMeals eachUserData={data} key={data._id} nutrientsData={nutrientsData}/> })}
+      {filteredItems.map(data => { return <DailyMeals eachUserData={data} key={data._id} nutrientsData={nutrientsData} /> })}
     </div>
   );
 };

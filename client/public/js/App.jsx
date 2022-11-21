@@ -13,7 +13,6 @@ const App = () => {
     const profileName = name.target.username.value;
     axios.get(`http://localhost:3000/healthTracker`, { params: { username: profileName } })
       .then(result => {
-        // console.log('~~~~ USERNAME RETRIEVAL ~~~~ ', result.data);
         if (result.data) {
           setUsername(profileName);
           setUserInformation(result.data);
@@ -56,18 +55,29 @@ const App = () => {
 
 
   return (
-    <div id="main-app">
-      {!username && !userInformation &&
-        <FrontPage usernameEntry={usernameEntry} />}
+    <div id="main-app" class="container">
+      <div class="row">
+        {!username && !userInformation &&
+          <div class="col offset-1">
+            <FrontPage usernameEntry={usernameEntry} />
+          </div>
+        }
 
-      {username && !userInformation &&
-        <Personalization username={username} infoUpdate={userInfoUpdate}
-          returnBtn={() => { setUsername(); setUserInformation(); }} />}
+        {username && !userInformation &&
+          <div class="col">
+            <Personalization username={username} infoUpdate={userInfoUpdate}
+              returnBtn={() => { setUsername(); setUserInformation(); }} />
+          </div>
+        }
 
-      {username && userInformation &&
-        <UserPage userInfo={userInformation}
-          returnBtn={() => { setUsername(); setUserInformation(); }} />}
-    </div>
+        {username && userInformation &&
+          <div class="col offset-1">
+            <UserPage userInfo={userInformation}
+              returnBtn={() => { setUsername(); setUserInformation(); }} />
+          </div>
+        }
+      </div>
+    </div >
   );
 };
 

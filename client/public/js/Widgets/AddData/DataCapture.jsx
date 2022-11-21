@@ -4,7 +4,7 @@ const DataCapture = ({ handleDataInput, handleReturnBtn }) => (
   <div>
     <br />
     <h4>Please fill out ALL fields in order to record your data.</h4>
-    <li>Put 0's for any data you don't want to record</li>
+    <li>Put 0's for any data you <b>don't</b> want to record</li>
     <br />
     <em>*Warning:  Adding data on the same date will override the previous data.</em>
 
@@ -24,8 +24,8 @@ const DataCapture = ({ handleDataInput, handleReturnBtn }) => (
       <label>Weight:</label> &nbsp;
       <input type="number" min="0" max="1000" name="weight" required /> lbs, taken at <input type="time" name="weight_time" required />
       <br /><br />
-      <input type="submit" value="ADD DATA" /> &nbsp;
-      <button onClick={() => handleReturnBtn()} >RETURN</button>
+      <input class="btn btn-outline-success" type="submit" value="ADD DATA" /> &nbsp;
+      <button class="btn btn-outline-primary"  onClick={() => handleReturnBtn()} >RETURN</button>
     </form>
   </div >
 );

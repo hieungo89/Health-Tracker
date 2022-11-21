@@ -5,7 +5,6 @@ const findUser = ({ username }) => {
   return User.find({ username: username });
 };
 const findUserAndUpdate = async (data) => {
-  // console.log('~~ INSERT USER PROFILE ~~ ', data);
   const filter = { username: data.username };
   return await User.findOneAndUpdate(filter, data, { upsert: true });
 };
@@ -15,7 +14,6 @@ const findUserData = ({ username }) => {
   return UserData.find({ username: username }).sort({ date: 1 });
 };
 const insertUserData = async (data) => {
-  // console.log('~~ INSERT USER DATA ~~ ', data);
   const filter = { username: data.username, firstName: data.firstName, lastName: data.lastName, date: data.date }
   return await UserData.findOneAndUpdate(filter, data, { upsert: true });
 };
@@ -42,7 +40,6 @@ const findIngredient = (ingredient) => {
   return NutritionData.find({ searchString: ingredient })
 };
 const findIngredientAndUpdate = async (data) => {
-  // console.log('~~ ADD INGREDIENT DATA ~~ ', data)
   const filter = { food: data.food, quantity: data.quantity, measure: data.measure };
   return await NutritionData.findOneAndUpdate(filter, data, { upsert: true });
 };

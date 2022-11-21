@@ -13,7 +13,6 @@ app.use(cors());
 
 // ~~~~ USER PROFILE ~~~~ //
 app.get('/healthTracker', (req, res) => {
-  console.log('request: ', req.query);
   controller.findUser(req.query)
     .then(result => {
       console.log('~~~ GET USER PROFILE ~~~', result)
@@ -29,7 +28,6 @@ app.post('/healthTracker', (req, res) => {
 
 // ~~~~ USER DATA - EXERCISE, SLEEP, WEIGHT ~~~~ //
 app.get('/userData', (req, res) => {
-  // console.log('get userdata: ', req.query);
   controller.findUserData(req.query)
     .then(result => {
       console.log('~~~ GET USER DATA ~~~', result)

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import DataCapture from './AddData/DataCapture.jsx';
 import DailyDataList from './DailyData/DailyDataList.jsx';
 import DailyMealsList from './DailyData/DailyMealsList.jsx';
@@ -28,7 +28,6 @@ const UserPage = ({ userInfo, returnBtn }) => {
   // ADD USER DATA TO DB, RETURN TO INFO PAGE
   const handleDataInput = (data) => {
     data.preventDefault();
-    console.log('handleDatainput: ', data.target)
     const dataParams = {
       username: username,
       firstName: firstName,
@@ -87,11 +86,10 @@ const UserPage = ({ userInfo, returnBtn }) => {
 
   // CHANGE CHART TO SPECIFIC NUTRIENT
   const handleNutrientBtnClick = (e) => {
+    if (!currentUserMeal.length) return;
     if (!e) {
       setNutrientKeyword('');
     } else {
-      console.log(e.target.textContent);
-      console.log(e);
       setNutrientKeyword(e.target.textContent);
     }
   }
@@ -117,8 +115,16 @@ const UserPage = ({ userInfo, returnBtn }) => {
     <div className="user-page">
       {infoPage && !addData &&
         <div>
-          <h2> Hi {firstName}!</h2>
-          <button onClick={returnBtn}>Switch user</button>
+          <div class="row">
+            <div class="col">
+              <h2> Hi {firstName}!</h2>
+            </div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col">
+              <button class="btn btn-outline-dark btn-sm" onClick={returnBtn}>Switch user</button>
+            </div>
+          </div>
           <h4>
             Today's Date: {moment(new Date()).format('dddd, MMMM D, Y')}
           </h4>
@@ -130,34 +136,32 @@ const UserPage = ({ userInfo, returnBtn }) => {
           </p>
 
           <br />
-          <button onClick={() => { setAddData(true); setInfoPage(false) }}>Add Data</button> &nbsp;
-          <button onClick={() => { setAddMeals(true); setInfoPage(false) }}>Add Meals</button>
+          <button class="btn btn-primary" onClick={() => { setAddData(true); setInfoPage(false) }}>Add Data</button> &nbsp;
+          <button class="btn btn-primary" onClick={() => { setAddMeals(true); setInfoPage(false) }}>Add Meals</button>
           <br /> <br />
 
           <h4>See your Progress:</h4>
-          <button onClick={() => {
+          <button class="btn btn-info" onClick={() => {
             setShowUserData(!showUserData);
             handleUserDataClick();
             setShowUserMeals(false);
           }}>Daily Exercise/Sleep/Weight</button> &nbsp;
-          <button onClick={() => {
+          <button class="btn btn-info" onClick={() => {
             setShowUserMeals(!showUserMeals);
             handleNutrientBtnClick();
             setShowUserData(false);
           }}>Daily Meals</button>
-
-
 
           {showUserData &&
             <div>
               <br />
               <h4>See charts</h4>
               <p>
-                <button onClick={() => handleUserDataClick()}>close chart</button>
+                <button class="btn btn-outline-dark btn-sm" onClick={() => handleUserDataClick()}>close chart</button>
               </p>
-              <button onClick={(e) => handleUserDataClick(e)}>Weight</button> &nbsp;
-              <button onClick={(e) => handleUserDataClick(e)}>Sleep</button>&nbsp;
-              <button onClick={(e) => handleUserDataClick(e)}>Exercise</button>
+              <button class="btn btn-outline-success" onClick={(e) => handleUserDataClick(e)}>Weight</button> &nbsp;
+              <button class="btn btn-outline-success" onClick={(e) => handleUserDataClick(e)}>Sleep</button>&nbsp;
+              <button class="btn btn-outline-success" onClick={(e) => handleUserDataClick(e)}>Exercise</button>
 
               {weightChart && <WeightChart currentUserInfo={currentUserInfo} />}
               {sleepChart && <SleepChart currentUserInfo={currentUserInfo} />}
@@ -169,13 +173,12 @@ const UserPage = ({ userInfo, returnBtn }) => {
           {showUserMeals &&
             <div> <br />
               <h4>
-                See charts
+                See Charts
               </h4>
               <p>
-                <button onClick={() => setNutrientKeyword('')}>close chart</button>
+                <button class="btn btn-outline-dark btn-sm" onClick={() => setNutrientKeyword('')}>close chart</button>
               </p>
-
-              {nutrientsData.map(data => { return <button onClick={(e) => handleNutrientBtnClick(e)} key={data}>{data}</button> })}
+              {nutrientsData.map(data => { return <button class="btn btn-outline-success" onClick={(e) => handleNutrientBtnClick(e)} key={data}>{data}</button> })}
 
               {nutrientKeyword &&
                 <NutrientChart currentUserMeal={currentUserMeal} keyword={nutrientKeyword} />

@@ -17,7 +17,6 @@ const NutrientChart = ({ currentUserMeal, keyword }) => {
     for (let i = 0; i < labelsContainer.length; i++) {
       let total = 0;
       currentUserMeal.filter(item => {
-        console.log('item', item)
         if (labelsContainer[i] === moment(item.date).format('l') && item.nutrientCount[keyword]) {
           total += item.nutrientCount[keyword].quantity;
         }

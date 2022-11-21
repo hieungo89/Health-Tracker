@@ -4,18 +4,23 @@ const DailyData = ({ eachUserData }) => {
   const { sleep, weight, exercise, date } = eachUserData;
 
   return (
-    <div>
-      <br />
-      <p>
-        Date: {moment(date).format('dddd, MMMM D, Y')}
-        <br /><br />
-        Total hours of sleep: {sleep.sleep_hr} hrs {sleep.sleep_min} mins.
-        <br />
-        Total hours of exercise: {exercise.exercise_hr} hrs {exercise.exercise_min} mins.
-        <br />
-        Latest Weight taken on is {weight.weightData}lb, taken at {weight.weightTime}.
-      </p>
-    </div>
+    <tr>
+      <td>
+        {moment(date).format('dddd, MMMM D, Y')}
+      </td>
+      <td>
+        {sleep.sleep_hr} hrs {sleep.sleep_min} mins.
+      </td>
+      <td>
+        {exercise.exercise_hr} hrs {exercise.exercise_min} mins.
+      </td>
+      <td>
+        {weight.weightData}lb
+      </td>
+      <td>
+        {weight.weightTime}
+      </td>
+    </tr>
   );
 };
 

@@ -20,7 +20,24 @@ const DailyDataList = ({ currentUserInfo }) => {
           onChange={e => setQuery(e.target.value)}
         />
       </div>
-      {filteredItems.map(data => { return <DailyData eachUserData={data} key={data._id} /> })}
+      <br/>
+
+      <div class="table-responsive">
+        <table class="table table-striped table-hover table-bordered">
+          <thead>
+            <tr class="table-primary">
+              <th>Date</th>
+              <th>Hours of Sleep</th>
+              <th>Hours of Exercise</th>
+              <th>Weight</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody class="table-group-divider">
+            {filteredItems.map(data => { return <DailyData eachUserData={data} key={data._id} /> })}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

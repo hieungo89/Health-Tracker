@@ -41,6 +41,7 @@ const userMealDataSchema = mongoose.Schema({
   username: String,
   date: String,
   mealType: String,
+  mealId: Number,
   foodsEaten: String,
   nutrientCount: {
     calories: { quantity: Number, unit: String },

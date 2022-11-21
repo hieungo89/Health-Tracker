@@ -140,7 +140,7 @@ const InputMeals = ({ handleReturnBtn, username }) => {
       <form onSubmit={(e) => searchNutritionInfo(e)}>
         <label>Add Description:</label> <br />
         <input type="number" name="amount" placeholder="1" min="0" max="100" required /> &nbsp;
-        <input type="text" name="measurement" placeholder="cup" size="8" required /> of &nbsp;
+        <input type="text" name="measurement" placeholder="cup" size="8" /> of &nbsp;
         <input type="text" name="foodName" placeholder="spaghetti" size="10" required /> &nbsp;
         <input type="submit" value="SEARCH" />
       </form>

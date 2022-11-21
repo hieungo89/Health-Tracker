@@ -47,12 +47,12 @@ const App = () => {
   };
 
   // LOGGING USERNAME AND INFO
-  useEffect(() => {
-    console.log('~~~~ USERNAME RETRIEVAL ~~~~');
-    console.log('username: ', username)
-    console.log('info: ', userInformation);
-    console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
-  }, [username]);
+  // useEffect(() => {
+  //   console.log('~~~~ USERNAME RETRIEVAL ~~~~');
+  //   console.log('username: ', username)
+  //   console.log('info: ', userInformation);
+  //   console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+  // }, [username]);
 
 
   return (

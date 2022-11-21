@@ -4,30 +4,23 @@ import DailyDataList from './DailyData/DailyDataList.jsx';
 import DailyMealsList from './DailyData/DailyMealsList.jsx';
 import InputMeals from './AddData/InputMeals.jsx';
 import axios from 'axios';
-import { Chart } from 'chart.js/auto';
+import WeightChart from './Charts/WeightChart.jsx';
+import SleepChart from './Charts/SleepChart.jsx';
+import ExerciseChart from './Charts/ExerciseChart.jsx';
 
 const UserPage = ({ userInfo, returnBtn }) => {
   const [infoPage, setInfoPage] = useState(true);
   const [addData, setAddData] = useState(false);
   const [addMeals, setAddMeals] = useState(false);
+  const [weightChart, setWeightChart] = useState(false);
+  const [sleepChart, setSleepChart] = useState(false);
+  const [exerciseChart, setExerciseChart] = useState(false);
   const [currentUserInfo, setCurrentUserInfo] = useState([]);
   const [currentUserMeal, setCurrentUserMeal] = useState([]);
-  const [showUserData, setShowUserData] = useState(false);
+  const [showUserData, setShowUserData] = useState(true);
   const [showUserMeals, setShowUserMeals] = useState(false);
 
-  const date = new Date();
   const { username, firstName, lastName, age, height, dietaryGoals, dietaryRestrictions, healthComplications } = userInfo;
-
-  const userInfoChart = {
-    type: 'line',
-    data: {
-      datasets: [{
-        data: [{ x: 10, y: 20 }, { x: 15, y: null }, { x: 20, y: 10 }]
-      }]
-    }
-  };
-
-
 
 
 
@@ -100,7 +93,7 @@ const UserPage = ({ userInfo, returnBtn }) => {
           <h2> Hi {firstName}!</h2>
           <button onClick={returnBtn}>Switch user</button>
           <h4>
-            Today's Date: {date.toDateString()}
+            Today's Date: {moment(new Date()).format('dddd, MMMM D, Y')}
           </h4>
 
           <br /> <br />
@@ -120,17 +113,42 @@ const UserPage = ({ userInfo, returnBtn }) => {
 
 
           {showUserData &&
-            <DailyDataList currentUserInfo={currentUserInfo} />}
+            <div>
+              <h4>See charts</h4>
+              <button onClick={() => {
+                setWeightChart(!weightChart);
+                setSleepChart(false);
+                setExerciseChart(false);
+              }}>Weight</button>
+              <button onClick={() => {
+                setSleepChart(!sleepChart);
+                setWeightChart(false);
+                setExerciseChart(false);
+              }}>Sleep</button>
+              <button onClick={() => {
+                setExerciseChart(!exerciseChart);
+                setWeightChart(false);
+                setSleepChart(false);
+              }}>Exercise</button>
+
+              {weightChart && <WeightChart currentUserInfo={currentUserInfo} />}
+              {sleepChart && <SleepChart currentUserInfo={currentUserInfo} />}
+              {exerciseChart && <ExerciseChart currentUserInfo={currentUserInfo} />}
+
+              <DailyDataList currentUserInfo={currentUserInfo} />
+            </div>
+          }
           {showUserMeals &&
-            <DailyMealsList currentUserMeal={currentUserMeal} />}
+            <DailyMealsList currentUserMeal={currentUserMeal} />
+          }
 
         </div>
       }
 
 
-      {!infoPage && addData &&
+      {addData &&
         <DataCapture handleDataInput={handleDataInput} handleReturnBtn={handleReturnBtn} />}
-      {!infoPage && addMeals &&
+      {addMeals &&
         <InputMeals handleReturnBtn={handleReturnBtn} username={username} />}
     </div>
   );

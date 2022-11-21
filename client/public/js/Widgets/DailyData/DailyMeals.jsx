@@ -7,7 +7,8 @@ const DailyMeals = ({ eachUserData }) => {
     <div>
       <br />
       <p>
-        Date: {date}, Meal Type: {mealType}
+        Date: {moment(date).format('dddd, MMMM D, Y')} <br/>
+        Meal Type: {mealType}
         <br /><br />
         List of foods eaten:
         <br />

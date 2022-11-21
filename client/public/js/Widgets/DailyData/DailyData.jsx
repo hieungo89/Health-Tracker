@@ -7,7 +7,7 @@ const DailyData = ({ eachUserData }) => {
     <div>
       <br />
       <p>
-        Date: {date}
+        Date: {moment(date).format('dddd, MMMM D, Y')}
         <br /><br />
         Total hours of sleep: {sleep.sleep_hr} hrs {sleep.sleep_min} mins.
         <br />

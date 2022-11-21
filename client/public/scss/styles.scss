@@ -8,15 +8,32 @@
 }
 
 body {
-  padding: 15px;
-  background-color: aliceblue;
+  padding: 5px 15px 60px 15px;
+  background-color: lightblue;
 }
 
 #main-app {
-  background-color: lightblue;
+  background-color: aliceblue;
 }
 
 input,
 button {
   border-radius: 5px;
+}
+
+.line-chart {
+  height: 400px;
+}
+
+.data-container {
+  max-height: 400px;
+  overflow: scroll;
+  padding: 0 15px 25px 15px;
+}
+
+.data-title {
+  position: sticky;
+  top: 0;
+  background-color: aliceblue;
+  width: 100%
 }

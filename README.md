@@ -32,8 +32,8 @@
 
 <table>
   <tr>
-    <td>
-      <img src="https://user-images.githubusercontent.com/104481165/206003623-eb99ce9c-41c7-4811-8bfe-048bc285cf17.png" alt="Main Page" width="400">
+    <td width="50%">
+      <img src="https://user-images.githubusercontent.com/104481165/206003623-eb99ce9c-41c7-4811-8bfe-048bc285cf17.png" alt="Main Page">
     </td>
     <td>
       This is the main page of the app. User can enter their username to get started.
@@ -48,8 +48,8 @@
 
 <table>
   <tr>
-    <td>
-      <img src="https://user-images.githubusercontent.com/104481165/206004697-b5fed664-8f5e-4c90-8eb0-c9c6a7a5f282.png" alt="Profile Creation" width="400">
+    <td width="50%">
+      <img src="https://user-images.githubusercontent.com/104481165/206004697-b5fed664-8f5e-4c90-8eb0-c9c6a7a5f282.png" alt="Profile Creation">
     </td>
     <td>
       Detailed form for user to fill out that will display on their personal page.
@@ -64,8 +64,8 @@
 
 <table>
   <tr>
-    <td>
-      <img src="https://user-images.githubusercontent.com/104481165/206005523-9f282d75-d13f-42ee-baef-2166586f60d6.png" alt="User Page" width="400">
+    <td width="50%">
+      <img src="https://user-images.githubusercontent.com/104481165/206005523-9f282d75-d13f-42ee-baef-2166586f60d6.png" alt="User Page">
     </td>
     <td>
       Upon completion of Profile or returning user, They are taken to the user page. User can add exercise, weight, sleep, and meals. They can also view their data that were inputted immediately.
@@ -80,8 +80,8 @@
 
 <table>
   <tr>
-    <td>
-    <img src="https://user-images.githubusercontent.com/104481165/206007595-0880e217-ef29-48fa-89e6-3332fc22ff33.png" alt="Add Data" width="400">
+    <td width="50%">
+    <img src="https://user-images.githubusercontent.com/104481165/206007595-0880e217-ef29-48fa-89e6-3332fc22ff33.png" alt="Add Data">
     </td>
     <td>
       <b>Add Data:</b> User can add exercise, sleep, and weight to their chart. All sections must be filled in order to submit the form. Data will only be recorded per date.
@@ -89,8 +89,8 @@
   </tr>
   <tr>
     <td>
-    <img src="https://user-images.githubusercontent.com/104481165/206025625-141c43e7-2963-4c08-a1f9-86bab2c3b4bb.png" alt="Add Meal" width="400">
-    <img src="https://user-images.githubusercontent.com/104481165/206026347-feeeac17-d372-4091-87e7-6be2abeeea02.png" alt="Search Meal" width="400">
+    <img src="https://user-images.githubusercontent.com/104481165/206025625-141c43e7-2963-4c08-a1f9-86bab2c3b4bb.png" alt="Add Meal">
+    <img src="https://user-images.githubusercontent.com/104481165/206026347-feeeac17-d372-4091-87e7-6be2abeeea02.png" alt="Search Meal">
     </td>
     <td>
       <b>Add Meals:</b> User can use the search meal feature to look up nutritional values of each item to add to the meal. Once meal is added, the total nutritional values are then calculated into the user's information. Meals are categorized into different types such as breakfast, brunch, lunch, dinner, snack, and other for additional entries.
@@ -105,9 +105,9 @@
 
 <table>
   <tr>
-    <td>
-    <img src="https://user-images.githubusercontent.com/104481165/206028224-a40b503c-c433-4d3f-beeb-9ff52f1cfe25.png" alt="Daily E/S/W button" width="400">
-    <img src="https://user-images.githubusercontent.com/104481165/206028514-1a043df1-7b12-45db-bf41-ce0b64b6866a.png" alt="chart" width="400">
+    <td width="50%">
+    <img src="https://user-images.githubusercontent.com/104481165/206028224-a40b503c-c433-4d3f-beeb-9ff52f1cfe25.png" alt="Daily E/S/W button">
+    <img src="https://user-images.githubusercontent.com/104481165/206028514-1a043df1-7b12-45db-bf41-ce0b64b6866a.png" alt="chart">
     </td>
     <td>
       <b>Daily Exercise/Sleep/Weight:</b> User can view their records in the user page by clicking on the "Daily Exercise/Sleep/Weight" button. Here user can view their records in the table below or by clicking on the specific chart. User can also search for specific date or day for their record.
@@ -115,8 +115,8 @@
   </tr>
   <tr>
     <td>
-    <img src="https://user-images.githubusercontent.com/104481165/206029275-f93989dd-dd5f-49fc-80f3-e9c26b8783d6.png" alt="Daily Meals button" width="400">
-    <img src="https://user-images.githubusercontent.com/104481165/206029824-10b195cc-ff00-4e26-b4ae-cc1ce7b57f76.png" alt="chart" width="400">
+    <img src="https://user-images.githubusercontent.com/104481165/206029275-f93989dd-dd5f-49fc-80f3-e9c26b8783d6.png" alt="Daily Meals button">
+    <img src="https://user-images.githubusercontent.com/104481165/206029824-10b195cc-ff00-4e26-b4ae-cc1ce7b57f76.png" alt="chart">
     </td>
     <td>
       <b>Daily Meals:</b> User can view their meals records in the user page by clicking on the "Daily Meals" button. Here users can view the chart on different nutrition categories, see their total meal records, and search for specific date or meal type.

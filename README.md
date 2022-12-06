@@ -15,8 +15,6 @@
 <a href="https://getbootstrap.com/">![-bootstrap](https://img.shields.io/badge/Bootstrap-7952B3.svg?style=for-the-badge&logo=Bootstrap&logoColor=white)</a>
 <a href="https://www.mongodb.com/">![-mongodb](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)</a>
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 ### This project includes the following sections:
 
 1. Profile Creation

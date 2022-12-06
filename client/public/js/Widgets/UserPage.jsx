@@ -115,14 +115,14 @@ const UserPage = ({ userInfo, returnBtn }) => {
     <div className="user-page">
       {infoPage && !addData &&
         <div>
-          <div class="row">
-            <div class="col">
+          <div className="row">
+            <div className="col">
               <h2> Hi {firstName}!</h2>
             </div>
-            <div class="col"></div>
-            <div class="col"></div>
-            <div class="col">
-              <button class="btn btn-outline-dark btn-sm" onClick={returnBtn}>Switch user</button>
+            <div className="col"></div>
+            <div className="col"></div>
+            <div className="col">
+              <button className="btn btn-outline-dark btn-sm" onClick={returnBtn}>Switch user</button>
             </div>
           </div>
           <h4>
@@ -136,17 +136,17 @@ const UserPage = ({ userInfo, returnBtn }) => {
           </p>
 
           <br />
-          <button class="btn btn-primary" onClick={() => { setAddData(true); setInfoPage(false) }}>Add Data</button> &nbsp;
-          <button class="btn btn-primary" onClick={() => { setAddMeals(true); setInfoPage(false) }}>Add Meals</button>
+          <button className="btn btn-primary" onClick={() => { setAddData(true); setInfoPage(false) }}>Add Data</button> &nbsp;
+          <button className="btn btn-primary" onClick={() => { setAddMeals(true); setInfoPage(false) }}>Add Meals</button>
           <br /> <br />
 
           <h4>See your Progress:</h4>
-          <button class="btn btn-info" onClick={() => {
+          <button className="btn btn-info" onClick={() => {
             setShowUserData(!showUserData);
             handleUserDataClick();
             setShowUserMeals(false);
           }}>Daily Exercise/Sleep/Weight</button> &nbsp;
-          <button class="btn btn-info" onClick={() => {
+          <button className="btn btn-info" onClick={() => {
             setShowUserMeals(!showUserMeals);
             handleNutrientBtnClick();
             setShowUserData(false);
@@ -157,11 +157,11 @@ const UserPage = ({ userInfo, returnBtn }) => {
               <br />
               <h4>See charts</h4>
               <p>
-                <button class="btn btn-outline-dark btn-sm" onClick={() => handleUserDataClick()}>close chart</button>
+                <button className="btn btn-outline-dark btn-sm" onClick={() => handleUserDataClick()}>close chart</button>
               </p>
-              <button class="btn btn-outline-success" onClick={(e) => handleUserDataClick(e)}>Weight</button> &nbsp;
-              <button class="btn btn-outline-success" onClick={(e) => handleUserDataClick(e)}>Sleep</button>&nbsp;
-              <button class="btn btn-outline-success" onClick={(e) => handleUserDataClick(e)}>Exercise</button>
+              <button className="btn btn-outline-success" onClick={(e) => handleUserDataClick(e)}>Weight</button> &nbsp;
+              <button className="btn btn-outline-success" onClick={(e) => handleUserDataClick(e)}>Sleep</button>&nbsp;
+              <button className="btn btn-outline-success" onClick={(e) => handleUserDataClick(e)}>Exercise</button>
 
               {weightChart && <WeightChart currentUserInfo={currentUserInfo} />}
               {sleepChart && <SleepChart currentUserInfo={currentUserInfo} />}
@@ -176,9 +176,9 @@ const UserPage = ({ userInfo, returnBtn }) => {
                 See Charts
               </h4>
               <p>
-                <button class="btn btn-outline-dark btn-sm" onClick={() => setNutrientKeyword('')}>close chart</button>
+                <button className="btn btn-outline-dark btn-sm" onClick={() => setNutrientKeyword('')}>close chart</button>
               </p>
-              {nutrientsData.map(data => { return <button class="btn btn-outline-success" onClick={(e) => handleNutrientBtnClick(e)} key={data}>{data}</button> })}
+              {nutrientsData.map(data => { return <button className="btn btn-outline-success" onClick={(e) => handleNutrientBtnClick(e)} key={data}>{data}</button> })}
 
               {nutrientKeyword &&
                 <NutrientChart currentUserMeal={currentUserMeal} keyword={nutrientKeyword} />

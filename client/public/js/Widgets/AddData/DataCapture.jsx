@@ -24,8 +24,8 @@ const DataCapture = ({ handleDataInput, handleReturnBtn }) => (
       <label>Weight:</label> &nbsp;
       <input type="number" min="0" max="1000" name="weight" required /> lbs, taken at <input type="time" name="weight_time" required />
       <br /><br />
-      <input class="btn btn-outline-success" type="submit" value="ADD DATA" /> &nbsp;
-      <button class="btn btn-outline-primary"  onClick={() => handleReturnBtn()} >RETURN</button>
+      <input className="btn btn-outline-success" type="submit" value="ADD DATA" /> &nbsp;
+      <button className="btn btn-outline-primary"  onClick={() => handleReturnBtn()} >RETURN</button>
     </form>
   </div >
 );

@@ -55,23 +55,23 @@ const App = () => {
 
 
   return (
-    <div id="main-app" class="container">
-      <div class="row">
+    <div id="main-app" className="container">
+      <div className="row">
         {!username && !userInformation &&
-          <div class="col offset-1">
+          <div className="col offset-1">
             <FrontPage usernameEntry={usernameEntry} />
           </div>
         }
 
         {username && !userInformation &&
-          <div class="col">
+          <div className="col">
             <Personalization username={username} infoUpdate={userInfoUpdate}
               returnBtn={() => { setUsername(); setUserInformation(); }} />
           </div>
         }
 
         {username && userInformation &&
-          <div class="col offset-1">
+          <div className="col offset-1">
             <UserPage userInfo={userInformation}
               returnBtn={() => { setUsername(); setUserInformation(); }} />
           </div>

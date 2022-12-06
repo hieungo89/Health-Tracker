@@ -100,8 +100,8 @@ const InputMeals = ({ handleReturnBtn, username, nutrientsData }) => {
 
       <form onSubmit={(e) => HandleAddMeal(e)}>
         <br />
-        <input class="btn btn-outline-success" type="submit" value="ADD MEAL" /> &nbsp;
-        <button class="btn btn-outline-primary" onClick={() => handleReturnBtn()}>RETURN</button>
+        <input className="btn btn-outline-success" type="submit" value="ADD MEAL" /> &nbsp;
+        <button className="btn btn-outline-primary" onClick={() => handleReturnBtn()}>RETURN</button>
         <br /><br />
         <label>Select Date: </label> &nbsp;
         <input type="date" name="date" required />
@@ -131,7 +131,7 @@ const InputMeals = ({ handleReturnBtn, username, nutrientsData }) => {
         <input type="number" name="amount" placeholder="1" min="0" max="100" required /> &nbsp;
         <input type="text" name="measurement" placeholder="cup" size="8" /> of &nbsp;
         <input type="text" name="foodName" placeholder="spaghetti" size="10" required /> &nbsp;
-        <input class="btn btn-info btn-sm" type="submit" value="SEARCH" />
+        <input className="btn btn-info btn-sm" type="submit" value="SEARCH" />
       </form>
 
       {ingredientData &&
@@ -148,7 +148,7 @@ const InputMeals = ({ handleReturnBtn, username, nutrientsData }) => {
             {ingredientData.sodium && <li>Sodium: {ingredientData.sodium.quantity}{ingredientData.sodium.unit}</li>}
             {ingredientData.sugar && <li>Sugar: {ingredientData.sugar.quantity}{ingredientData.sugar.unit}</li>}
           </ul>
-          <button class="btn btn-outline-success" onClick={() => handleAddIngredient()}>ADD</button>
+          <button className="btn btn-outline-success" onClick={() => handleAddIngredient()}>ADD</button>
         </div>
       }
 

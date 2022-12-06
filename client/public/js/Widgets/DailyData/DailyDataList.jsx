@@ -22,10 +22,10 @@ const DailyDataList = ({ currentUserInfo }) => {
       </div>
       <br/>
 
-      <div class="table-responsive">
-        <table class="table table-striped table-hover table-bordered">
+      <div className="table-responsive">
+        <table className="table table-striped table-hover table-bordered">
           <thead>
-            <tr class="table-primary">
+            <tr className="table-primary">
               <th>Date</th>
               <th>Hours of Sleep</th>
               <th>Hours of Exercise</th>
@@ -33,7 +33,7 @@ const DailyDataList = ({ currentUserInfo }) => {
               <th>Time</th>
             </tr>
           </thead>
-          <tbody class="table-group-divider">
+          <tbody className="table-group-divider">
             {filteredItems.map(data => { return <DailyData eachUserData={data} key={data._id} /> })}
           </tbody>
         </table>

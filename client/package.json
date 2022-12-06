@@ -4,7 +4,7 @@
   "description": "This is the frontend for the Health Tracker app. Frontend is built with Vite and React. Bootstrap is used for CSS.",
   "main": "index.js",
   "scripts": {
-    "dev": "vite",
+    "start": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },

@@ -69,25 +69,10 @@ const InputMeals = ({ handleReturnBtn, username, nutrientsData }) => {
         }
       })
     }
-    // console.log('DATA~~~~ ', data);
     axios.post('http://localhost:3000/userMeal', data)
       .then(() => handleReturnBtn())
       .catch(err => console.log('~~ ERROR ADDING MEAL TO DB ~~', err));
   }
-
-  // LOGGING CHANGES FOR DEV
-  // useEffect(() => {
-  //   console.log('ingredients: ', ingredientData);
-  // }, [ingredientData]);
-
-  // useEffect(() => {
-  //   console.log('mealType: ', mealType);
-  // }, [mealType]);
-
-  // useEffect(() => {
-  //   console.log('Food Data: ', foodData);
-  //   console.log('nutrient data: ', nutrientsData);
-  // }, [foodData]);
 
   return (
     <div>

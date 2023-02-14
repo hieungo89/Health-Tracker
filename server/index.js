@@ -14,10 +14,7 @@ app.use(cors());
 // ~~~~ USER PROFILE ~~~~ //
 app.get('/healthTracker', (req, res) => {
   controller.findUser(req.query)
-    .then(result => {
-      console.log('~~~ GET USER PROFILE ~~~', result)
-      res.status(202).send(result[0]);
-    })
+    .then(result => res.status(202).send(result[0]))
     .catch(err => res.status(404).send('Error Retrieving User: ', err));
 });
 app.post('/healthTracker', (req, res) => {
@@ -29,10 +26,7 @@ app.post('/healthTracker', (req, res) => {
 // ~~~~ USER DATA - EXERCISE, SLEEP, WEIGHT ~~~~ //
 app.get('/userData', (req, res) => {
   controller.findUserData(req.query)
-    .then(result => {
-      console.log('~~~ GET USER DATA ~~~', result)
-      res.status(202).send(result);
-    })
+    .then(result => res.status(202).send(result))
     .catch(err => res.status(404).send('Error Retrieving User: ', err));
 });
 app.post('/userData', (req, res) => {
@@ -44,10 +38,7 @@ app.post('/userData', (req, res) => {
 // ~~~~ USER DATA - MEALS ~~~~ //
 app.get('/userMeal', (req, res) => {
   controller.findMealData(req.query)
-    .then(result => {
-      console.log('~~~ GET MEALS ~~~', result);
-      res.status(202).send(result);
-    })
+    .then(result => res.status(202).send(result))
     .catch(err => res.status(404).send('Error Retrieving User: ', err));
 });
 app.post('/userMeal', (req, res) => {
@@ -60,7 +51,6 @@ app.post('/userMeal', (req, res) => {
 app.get('/nutritionData', (req, res) => {
   controller.findIngredient(req.query.ingr)
     .then(result => {
-      console.log('~~~ GET INGREDIENT RESULT FROM DB ~~~', result);
       if (result.length > 0) {
         res.status(202).send(result[0]);
       } else {
@@ -83,7 +73,6 @@ app.get('/nutritionData', (req, res) => {
             return data;
           })
           .then(data => {
-            console.log('~~~ GET INGREDIENT RESULT FROM API ~~~', result);
             controller.findIngredientAndUpdate(data);
             res.status(200).send(data);
           })

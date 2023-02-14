@@ -103,14 +103,6 @@ const UserPage = ({ userInfo, returnBtn }) => {
       .then(result => setCurrentUserMeal(result.data));
   }, [infoPage]);
 
-  // LOGGING CHANGES IN INFO AND MEAL
-  // useEffect(() => {
-  //   console.log("~~~~ USER INFO & MEALS ~~~~");
-  //   console.log(currentUserInfo);
-  //   console.log(currentUserMeal);
-  //   console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-  // }, [currentUserInfo, currentUserMeal])
-
   return (
     <div className="user-page">
       {infoPage && !addData &&

@@ -45,15 +45,6 @@ const App = () => {
       .catch(err => console.log('Error frontend POST: ', err));
   };
 
-  // LOGGING USERNAME AND INFO
-  // useEffect(() => {
-  //   console.log('~~~~ USERNAME RETRIEVAL ~~~~');
-  //   console.log('username: ', username)
-  //   console.log('info: ', userInformation);
-  //   console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
-  // }, [username]);
-
-
   return (
     <div id="main-app" className="container">
       <div className="row">

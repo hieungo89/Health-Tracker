@@ -1,5 +1,5 @@
-import * as bootstrap from 'bootstrap'; // Import all of Bootstrap's JS
-import '../scss/styles.scss'; // Import our custom CSS
+import * as bootstrap from 'bootstrap';
+import '../scss/styles.scss';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
